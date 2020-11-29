@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../../Header.module.css";
 import {NavItem, NavLink} from "react-bootstrap";
 
 export default class MenuItem extends React.Component {
@@ -13,7 +12,7 @@ export default class MenuItem extends React.Component {
     }
 
     styleHover = {
-        boxShadow: "0px 3px 0px 0px #F14D34"
+        boxShadow: "0px 4px 0px 0px #F14D34"
     }
 
     onMouseEnter = () => this.setState({hover: true})
@@ -22,12 +21,11 @@ export default class MenuItem extends React.Component {
     render() {
         return (
             <NavItem id={this.props.id} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
-                <NavLink href={this.props.ref} style={this.state.hover ? {...this.style, ...this.styleHover} : this.style}>
+                <NavLink href={this.props.href} style={this.state.hover ? {...this.style, ...this.styleHover} : this.style}>
                     {this.props.text}
                 </NavLink>
             </NavItem>
         )
     }
-
 
 }

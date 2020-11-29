@@ -13,7 +13,7 @@ export default class Header extends React.Component {
 
     render() {
         return (
-            <Container className="container-fluid" style={this.style}>
+            <Container fluid style={this.style}>
                 <Menu/>
             </Container>
         )

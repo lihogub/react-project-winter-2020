@@ -31,13 +31,13 @@ export default class Menu extends React.Component {
             })
         }
         return (
-            <Navbar className="container-fluid">
-                <Row className="container-fluid">
-                    <Col xs={2} className="justify-content-center">
+            <Navbar fluid>
+                <Row xs={1} md={2}>
+                    <Col xs={12} md={2} style={{display: "flex"}} className="justify-content-center align-items-center">
                         <Image src={drupalCoderImg} width={"160px"}/>
                     </Col>
-                    <Col>
-                        <Row className="justify-content-end">
+                    <Col xs={12} md={10} className="d-xs-none d-md-block">
+                        <Row className="justify-content-center">
                             {links}
                         </Row>
                     </Col>

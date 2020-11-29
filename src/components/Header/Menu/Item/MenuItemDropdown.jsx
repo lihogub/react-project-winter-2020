@@ -12,8 +12,9 @@ export default class MenuItem extends React.Component {
         color: "white"
     }
 
-    onMouseEnter = () => this.setState({hover: true})
-    onMouseLeave = () => this.setState({hover: false})
+    showDropdown = () => this.setState({hover: true})
+    hideDropdown = () => this.setState({hover: false})
+    toggleDropdown = () => this.state.hover ? this.hideDropdown() : this.showDropdown()
 
     dropdownLinks = this.props.drop.map((item, index, _) => (
         <Dropdown.Item style={this.style} key={index} href={item.ref} children={item.text}/>
@@ -21,8 +22,8 @@ export default class MenuItem extends React.Component {
 
     render() {
         return (
-            <NavItem key={this.props.id} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
-                <NavDropdown title={this.props.text} to={this.props.href} show={this.state.hover}>
+            <NavItem id={this.props.id} key={this.props.id} onClick={this.toggleDropdown} onMouseEnter={this.showDropdown} onMouseLeave={this.hideDropdown}>
+                <NavDropdown title={this.props.text} onSelect={this.hideDropdown} show={this.state.hover}>
                     {this.dropdownLinks}
                 </NavDropdown>
             </NavItem>

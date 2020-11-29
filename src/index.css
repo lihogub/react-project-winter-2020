@@ -19,6 +19,7 @@ code {
 
 .dropdown-item {
   background-color: #F14D34;
+  color: white;
 }
 
 .dropdown-toggle:hover {
@@ -31,5 +32,36 @@ code {
 
 .dropdown-item:active {
   background-color: darkred;
-  color: black;
 }
+
+
+/*------*/
+@media (max-width: 768px) {
+
+  .dropdown-toggle {
+    float: left;
+  }
+
+  .dropdown-menu {
+    /*width:100%;*/
+  }
+
+  .dropdown-menu.show {
+    position: relative !important;
+    clear: both;
+    margin-top: 0;
+    transform: none !important;
+  }
+
+  .dropdown-item {
+    background-color: black;
+    border-bottom: gray 1px solid;
+  }
+
+  .dropdown-item:hover {
+    background-color: black;
+  }
+
+}
+
+/*-------*/

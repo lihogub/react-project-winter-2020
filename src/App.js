@@ -7,7 +7,9 @@ import {Container} from "react-bootstrap";
 export default class App extends React.Component {
     render() {
         return (
-            <Header/>
+            <Container>
+                <Header/>
+            </Container>
         )
     }
 }
