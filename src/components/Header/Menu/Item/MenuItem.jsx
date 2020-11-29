@@ -13,7 +13,7 @@ export default class MenuItem extends React.Component {
     }
 
     styleHover = {
-        boxShadow: "0px 5px 0px 0px rgba(255, 0, 0, 0.75)"
+        boxShadow: "0px 3px 0px 0px #F14D34"
     }
 
     onMouseEnter = () => this.setState({hover: true})

@@ -1,6 +1,6 @@
 import React from "react";
 import MenuItem from "./Item/MenuItem";
-import {Col, Container, Image, Navbar, Row} from "react-bootstrap";
+import {Col, Image, Navbar, Row} from "react-bootstrap";
 import drupalCoderImg from "../../../res/images/drupal-coder.svg";
 import MenuItemDropdown from "./Item/MenuItemDropdown";
 import axios from "axios";
@@ -24,21 +24,23 @@ export default class Menu extends React.Component {
         if (this.state.linkDataJson) {
             links = this.state.linkDataJson.map((item, index, _)=>{
                 if (item.drop.length > 0) {
-                    return <MenuItemDropdown id={item.id} key={item.id} text={item.text} ref={item.ref} drop={item.drop}/>
+                    return <MenuItemDropdown id={item.id} key={item.id} text={item.text} href={item.ref} drop={item.drop}/>
                 } else {
-                    return <MenuItem id={item.id} key={item.id} text={item.text} ref={item.ref}/>
+                    return <MenuItem id={item.id} key={item.id} text={item.text} href={item.ref}/>
                 }
             })
         }
         return (
-            <Navbar>
-                <Row>
-                    <Col>
-                        <Image fluid={true} src={drupalCoderImg} width={"165px"}/>
+            <Navbar className="container-fluid">
+                <Row className="container-fluid">
+                    <Col xs={2} className="justify-content-center">
+                        <Image src={drupalCoderImg} width={"160px"}/>
                     </Col>
-                    <Row>
-                        {links}
-                    </Row>
+                    <Col>
+                        <Row className="justify-content-end">
+                            {links}
+                        </Row>
+                    </Col>
                 </Row>
             </Navbar>
         )

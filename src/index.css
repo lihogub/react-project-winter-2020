@@ -17,9 +17,6 @@ code {
   padding: 0;
 }
 
-.dropdown-menu:hover {
-}
-
 .dropdown-item {
   background-color: #F14D34;
 }
@@ -30,4 +27,9 @@ code {
 
 .dropdown-item:hover {
   background-color: red;
+}
+
+.dropdown-item:active {
+  background-color: darkred;
+  color: black;
 }

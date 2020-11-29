@@ -21,8 +21,8 @@ export default class MenuItem extends React.Component {
 
     render() {
         return (
-            <NavItem key={this.props.key} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
-                <NavDropdown title={this.props.text} show={this.state.hover}>
+            <NavItem key={this.props.id} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
+                <NavDropdown title={this.props.text} to={this.props.href} show={this.state.hover}>
                     {this.dropdownLinks}
                 </NavDropdown>
             </NavItem>
