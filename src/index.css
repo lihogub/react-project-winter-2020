@@ -17,6 +17,9 @@ code {
   padding: 0;
 }
 
+.dropdown-menu:hover {
+}
+
 .dropdown-item {
   background-color: #F14D34;
 }
