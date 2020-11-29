@@ -1,0 +1,16 @@
+.linkStyle {
+    color: white;
+}
+
+.linkStyle:hover {
+    color: white;
+}
+
+a {
+    color: white;
+    font-size: 12px;
+}
+
+.navItem:hover {
+    border-bottom: #F14D34 5px solid;
+}
