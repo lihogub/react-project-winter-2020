@@ -2,7 +2,7 @@
 
 ## Endpoint
 
-#### [https://react-warriors-rest-api.herokuapp.com/get](https://react-warriors-rest-api.herokuapp.com/api)
+#### [https://react-warriors-rest-api.herokuapp.com/api](https://react-warriors-rest-api.herokuapp.com/api)
 
 ## Methods
 
@@ -30,6 +30,19 @@
     {
         id: Number, 
         text: String
+    }
+
+### menu
+    {
+        id: Number, 
+        ref: String
+        text: String
+        drop: [
+            {
+                ref: String,
+                text: String
+            }
+        ]
     }
 
 ### rate
