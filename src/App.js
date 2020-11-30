@@ -8,9 +8,9 @@ import Workers from "./components/Workers/Workers";
 export default class App extends React.Component {
     render() {
         return (
-            <Container>
+            <Container fluid={true}>
                 <Header/>
-                <Workers />
+                {/*<Workers/>*/}
             </Container>
         )
     }

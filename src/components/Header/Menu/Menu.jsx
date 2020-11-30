@@ -19,7 +19,6 @@ export default class Menu extends React.Component {
     }
 
     render() {
-
         let links = null;
         if (this.state.linkDataJson) {
             links = this.state.linkDataJson.map((item, index, _)=>{
@@ -31,12 +30,12 @@ export default class Menu extends React.Component {
             })
         }
         return (
-            <Navbar fluid>
+            <Navbar className="justify-content-center d-none d-sm-flex">
                 <Row xs={1} md={2}>
-                    <Col xs={12} md={2} style={{display: "flex"}} className="justify-content-center align-items-center">
+                    <Col xs={12} md={2} className="d-flex justify-content-center align-items-center">
                         <Image src={drupalCoderImg} width={"160px"}/>
                     </Col>
-                    <Col xs={12} md={10} className="d-xs-none d-md-block">
+                    <Col xs={12} md={10}>
                         <Row className="justify-content-center">
                             {links}
                         </Row>
@@ -45,5 +44,4 @@ export default class Menu extends React.Component {
             </Navbar>
         )
     }
-
 }
