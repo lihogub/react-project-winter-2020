@@ -1,5 +1,6 @@
 import React from "react";
 import {Dropdown, NavDropdown, NavItem} from "react-bootstrap";
+import styles from "./MenuItem.module.css";
 
 export default class MenuItem extends React.Component {
 
@@ -12,8 +13,8 @@ export default class MenuItem extends React.Component {
         color: "white"
     }
 
-    showDropdown = () => this.setState({hover: true})
-    hideDropdown = () => this.setState({hover: false})
+    showDropdown = () => this.state.hover ? null : this.setState({hover: true})
+    hideDropdown = () => this.state.hover ? this.setState({hover: false}) : null
     toggleDropdown = () => this.state.hover ? this.hideDropdown() : this.showDropdown()
 
     dropdownLinks = this.props.drop.map((item, index, _) => (
@@ -22,8 +23,8 @@ export default class MenuItem extends React.Component {
 
     render() {
         return (
-            <NavItem id={this.props.id} key={this.props.id} onClick={this.toggleDropdown} onMouseEnter={this.showDropdown} onMouseLeave={this.hideDropdown}>
-                <NavDropdown title={this.props.text} onSelect={this.hideDropdown} show={this.state.hover}>
+            <NavItem style={this.style} id={this.props.id} key={this.props.id} onClick={this.toggleDropdown} onMouseEnter={this.showDropdown} onMouseLeave={this.hideDropdown}>
+                <NavDropdown className={styles.menuItem} style={this.style} title={this.props.text} onSelect={this.hideDropdown} show={this.state.hover}>
                     {this.dropdownLinks}
                 </NavDropdown>
             </NavItem>
