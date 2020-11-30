@@ -33,23 +33,10 @@ export default class Menu extends React.Component {
         }
         return (
             <Navbar collapseOnSelect expand="md" variant="dark" className="container-fluid container-md justify-content-between">
-                {/*<Navbar className="container-fluid justify-content-center">
-                    <Row className="container-fluid container-lg">
-                        <Col xs={12} sm={3} md={3} lg={2} className="d-flex justify-content-start align-items-center">
-                            <Image src={drupalCoderImg} width="160px"/>
-                        </Col>
-                        <Col xs={12} sm={9} md={9} lg={10} className="justify-content-between d-none d-md-flex">
-                            <Row className="d-flex justify-content-center align-items-center">
-                                {links}
-                            </Row>
-                        </Col>
-                        <Col className="d-flex d-md-none">Hello</Col>
-                    </Row>
-                </Navbar>*/}
                 <Navbar.Brand href="#home" className="d-flex align-items-center">
                     <Image src={drupalCoderImg} width="170px"/>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" className=""/>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                     <Row className="justify-content-around d-none d-md-flex">
                         {links}
