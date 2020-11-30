@@ -7,15 +7,13 @@ export default class CompetencyItem extends React.Component {
 
     render() {
         return (
-            <div className='col-sm-3 col-xs-6'>
-                <div className={styles.common}>
-                    <div className=''>
-                        <img className={styles.icon} src={this.props.imageUrl}/>
-                        <img className={styles.bg_image} src={BGImg}/>
-                    </div>
-                    <div className={styles.txt}>
-                        {this.props.text}
-                    </div>
+            <div className={styles.common}>
+                <div className=''>
+                    <img className={styles.icon} src={this.props.imageUrl}/>
+                    <img className={styles.bg_image} src={BGImg}/>
+                </div>
+                <div className='m-3'>
+                    {this.props.text}
                 </div>
             </div>
         )
