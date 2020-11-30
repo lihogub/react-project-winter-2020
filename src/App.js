@@ -11,7 +11,7 @@ export default class App extends React.Component {
             <Container>
                 <Header/>
                 <Competency/>
-                <Workers />git
+                <Workers />
             </Container>
         )
     }
