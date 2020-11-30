@@ -1,36 +1,22 @@
 import React from "react";
-import BackgoundImg from "./../../../res/images/drupal-coder.svg";
+import BGImg from "./../../../res/images/drupal-coder-bg.png";
+import styles from "./item.module.css";
+import {Card} from "react-bootstrap";
 
 export default class CompetencyItem extends React.Component {
 
-    commonStyle = {
-        backgroundColor: 'grey',
-    }
-
-    imgStyle = {
-        backgroundColor: 'red',
-        maxHeight: 81,
-        maxWidth: 81
-    }
-
-    backgroundImgStyle = {
-        background: BackgoundImg,
-        opacity: 0.3,
-    }
-
     render() {
         return (
-            <div className='flex-wrap' style={this.commonStyle}>
-                <div className='p-2 bd-highlight'>
-                    <div style={this.backgroundImgStyle}>
-
+            <div className='col-sm-3 col-xs-6'>
+                <div className={styles.common}>
+                    <div className=''>
+                        <img className={styles.icon} src={this.props.imageUrl}/>
+                        <img className={styles.bg_image} src={BGImg}/>
                     </div>
-                    <img style={this.imgStyle} src={this.props.imageUrl}/>
+                    <div className={styles.txt}>
+                        {this.props.text}
+                    </div>
                 </div>
-                <div className='p-2 bd-highlight' style={this.textStyle}>
-                    {this.props.text}
-                </div>
-
             </div>
         )
     }

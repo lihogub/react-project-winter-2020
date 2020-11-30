@@ -1,3 +1,39 @@
-.backLogo:before {
+.icon{
+    z-index: 1;
+    opacity: 1.0;
+
+    position: relative;
+
+    height: 81px;
+    width: 81px;
+
+    top: 5px;
+    left: 5px;
+}
+
+.bg_image {
+    z-index: 0;
+    opacity: 0.10;
+
+    height: 230px;
+    width: 230px;
+    max-height: 103px;
+    max-width: 103px;
+
+    position: absolute;
+    top: 14px;
+    left: -20px;
+}
+
+.txt{
+    display: flex;
+    background: cadetblue;
+    margin-top: 10px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 80px;
+}
+
+.common{
 
 }
