@@ -1,6 +1,11 @@
 import React from "react";
+import BackgoundImg from "./../../../res/images/drupal-coder.svg";
 
 export default class CompetencyItem extends React.Component {
+
+    commonStyle = {
+        backgroundColor: 'grey',
+    }
 
     imgStyle = {
         backgroundColor: 'red',
@@ -9,26 +14,23 @@ export default class CompetencyItem extends React.Component {
     }
 
     backgroundImgStyle = {
-        backgroundColor: 'blue',
+        background: BackgoundImg,
         opacity: 0.3,
-        maxHeight: 81,
-        maxWidth: 81
     }
 
     render() {
         return (
-            <div className=''>
-                <div style = {this.imgStyle}>
-                    <img src={this.props.imageUrl}/>
-                </div>
+            <div className='flex-wrap' style={this.commonStyle}>
+                <div className='p-2 bd-highlight'>
+                    <div style={this.backgroundImgStyle}>
 
-                <div style = {this.backgroundImgStyle}>
-                    <img src={this.props.imageUrl}/>
+                    </div>
+                    <img style={this.imgStyle} src={this.props.imageUrl}/>
                 </div>
-
-                <div>
+                <div className='p-2 bd-highlight' style={this.textStyle}>
                     {this.props.text}
                 </div>
+
             </div>
         )
     }

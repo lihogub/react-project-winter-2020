@@ -9,7 +9,7 @@ export default class App extends React.Component {
         return (
             <Container>
                 <Header/>
-                <CompetencyItem text='megakektest123qwerty'/>
+                <CompetencyItem text='test text test test 123' imageUrl='https://testcreative.co.uk/wp-content/uploads/2018/08/Test-Twitter-Icon.jpg'/>
             </Container>
         )
     }
