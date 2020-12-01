@@ -1,0 +1,27 @@
+.block{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 20px 20px 40px rgba(5,12,51,.05);
+    margin-left: -12px;
+    margin-right: -12px;
+    height: 100%;
+    position: relative;
+    padding: 25px 25px 45px;
+    min-height: 292px;
+}
+
+.wrapper{
+
+}
+
+.header{
+
+}
+
+.body{
+
+}
+
+.image{
+
+}
