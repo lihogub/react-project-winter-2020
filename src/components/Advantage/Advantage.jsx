@@ -13,7 +13,7 @@ export default class Advantage extends React.Component {
 
     render() {
         return (
-            <div className='row row-flex advantages-row'>
+            <div className='row row-flex'>
                 <div className='col-sm-6 col-md-3 col-xs-12'>
                     <AdvantageItem
                         id='01.'

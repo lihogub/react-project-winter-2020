@@ -6,7 +6,6 @@ export default class AdvantageItem extends React.Component {
     render() {
         return (
             <div className={styles.block}>
-                <div className={styles.wrapper}>
                     <div className={styles.header}>
                         <div className={styles.id_number}>
                             {this.props.id}
@@ -21,7 +20,6 @@ export default class AdvantageItem extends React.Component {
                     <div className={styles.image}>
                         <img src={this.props.imageUrl}/>
                     </div>
-                </div>
             </div>
         )
     }
