@@ -11,7 +11,7 @@ export default class Workers extends React.Component {
 
     render() {
         return (
-            <div className="d-flex row justify-content-center" style={this.style}>
+            <div className="container d-flex row justify-content-center" style={this.style}>
                 <Worker imageUrl={IMG_2472_0} name="name1"
                         job="job1 job1 job1 job1 job1 job1 job1 job1 job1 job1 job1 job1"
                         className="col-4"/>

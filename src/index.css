@@ -14,12 +14,16 @@ code {
 
 .dropdown-menu {
   background-color: #F14D34;
+  color: white;
   padding: 0;
 }
 
 .dropdown-item {
   background-color: #F14D34;
-  color: white;
+}
+
+.dropdown-toggle {
+  color: white !important;
 }
 
 .dropdown-toggle:hover {
@@ -34,34 +38,18 @@ code {
   background-color: darkred;
 }
 
-
-/*------*/
 @media (max-width: 768px) {
-
-  .dropdown-toggle {
-    float: left;
-  }
-
-  .dropdown-menu {
-    /*width:100%;*/
-  }
-
-  .dropdown-menu.show {
-    position: relative !important;
-    clear: both;
-    margin-top: 0;
-    transform: none !important;
-  }
-
   .dropdown-item {
-    background-color: black;
-    border-bottom: gray 1px solid;
+    background-color: rgba(0, 0, 0, 0);
+    border-top: gray 1px solid;
   }
 
   .dropdown-item:hover {
-    background-color: black;
+    color: red;
+    background-color: rgba(0, 0, 0, 0);
   }
 
+  .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
-
-/*-------*/

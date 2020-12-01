@@ -1,6 +1,6 @@
 import React from "react";
 import MenuItem from "./Item/MenuItem";
-import {Col, Image, Navbar, Row} from "react-bootstrap";
+import {Col, Image, Nav, Navbar, NavDropdown, Row} from "react-bootstrap";
 import drupalCoderImg from "../../../res/images/drupal-coder.svg";
 import MenuItemDropdown from "./Item/MenuItemDropdown";
 import axios from "axios";
@@ -9,7 +9,9 @@ const endpoint = "https://react-warriors-rest-api.herokuapp.com/api/menu";
 
 export default class Menu extends React.Component {
 
-    state = {linkDataJson: []}
+    state = {
+        linkDataJson: []
+    }
 
     componentDidMount() {
         axios.get(endpoint).then(
@@ -19,7 +21,6 @@ export default class Menu extends React.Component {
     }
 
     render() {
-
         let links = null;
         if (this.state.linkDataJson) {
             links = this.state.linkDataJson.map((item, index, _)=>{
@@ -31,19 +32,20 @@ export default class Menu extends React.Component {
             })
         }
         return (
-            <Navbar fluid>
-                <Row xs={1} md={2}>
-                    <Col xs={12} md={2} style={{display: "flex"}} className="justify-content-center align-items-center">
-                        <Image src={drupalCoderImg} width={"160px"}/>
-                    </Col>
-                    <Col xs={12} md={10} className="d-xs-none d-md-block">
-                        <Row className="justify-content-center">
-                            {links}
-                        </Row>
-                    </Col>
-                </Row>
+            <Navbar collapseOnSelect expand="md" variant="dark" className="container-fluid container-md justify-content-between">
+                <Navbar.Brand href="#home" className="d-flex align-items-center">
+                    <Image src={drupalCoderImg} width="170px"/>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+                    <Row className="justify-content-around d-none d-md-flex">
+                        {links}
+                    </Row>
+                    <Nav className="d-flex d-md-none">
+                        {links}
+                    </Nav>
+                </Navbar.Collapse>
             </Navbar>
         )
     }
-
 }
