@@ -14,7 +14,7 @@ export default class Advantage extends React.Component {
     render() {
         return (
             <div className='row row-flex advantages-row'>
-                <div className='col-sm-6 col-md-3 col-xs-12 advantage-col'>
+                <div className='col-sm-6 col-md-3 col-xs-12'>
                     <AdvantageItem
                         id='01.'
                         title='Постановка задачи по Email'
@@ -22,7 +22,7 @@ export default class Advantage extends React.Component {
                         imageUrl={supportImage1}
                     />
                 </div>
-                <div className='col-sm-6 col-md-3 col-xs-12 advantage-col'>
+                <div className='col-sm-6 col-md-3 col-xs-12'>
                     <AdvantageItem
                         id='02.'
                         title='Система Helpdesk – отчетность, прозрачность'
@@ -30,7 +30,7 @@ export default class Advantage extends React.Component {
                         imageUrl={supportImage2}
                     />
                 </div>
-                <div className='col-sm-6 col-md-3 col-xs-12 advantage-col'>
+                <div className='col-sm-6 col-md-3 col-xs-12'>
                     <AdvantageItem
                         id='03.'
                         title='Расширенная техническая поддержка'
@@ -38,7 +38,7 @@ export default class Advantage extends React.Component {
                         imageUrl={supportImage3}
                     />
                 </div>
-                <div className='col-sm-6 col-md-3 col-xs-12 advantage-col'>
+                <div className='col-sm-6 col-md-3 col-xs-12'>
                     <AdvantageItem
                         id='04.'
                         title='Персональный менеджер проекта'
@@ -46,7 +46,7 @@ export default class Advantage extends React.Component {
                         imageUrl={supportImage4}
                     />
                 </div>
-                <div className='col-sm-6 col-md-3 col-xs-12 advantage-col'>
+                <div className='col-sm-6 col-md-3 col-xs-12'>
                     <AdvantageItem
                         id='05.'
                         title='Удобные способы оплаты'
@@ -54,7 +54,7 @@ export default class Advantage extends React.Component {
                         imageUrl={supportImage5}
                     />
                 </div>
-                <div className='col-sm-6 col-md-3 col-xs-12 advantage-col'>
+                <div className='col-sm-6 col-md-3 col-xs-12'>
                     <AdvantageItem
                         id='06.'
                         title='Работаем с SLA и NDA'
@@ -62,7 +62,7 @@ export default class Advantage extends React.Component {
                         imageUrl={supportImage6}
                     />
                 </div>
-                <div className='col-sm-6 col-md-3 col-xs-12 advantage-col'>
+                <div className='col-sm-6 col-md-3 col-xs-12'>
                     <AdvantageItem
                         id='07.'
                         title='Штатные специалисты'
@@ -70,7 +70,7 @@ export default class Advantage extends React.Component {
                         imageUrl={supportImage7}
                     />
                 </div>
-                <div className='col-sm-6 col-md-3 col-xs-12 advantage-col'>
+                <div className='col-sm-6 col-md-3 col-xs-12'>
                     <AdvantageItem
                         id='08.'
                         title='Удобные каналы связи'

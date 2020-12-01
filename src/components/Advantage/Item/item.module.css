@@ -10,18 +10,43 @@
     min-height: 292px;
 }
 
-.wrapper{
+.id_number{
+    font-weight: bold;
+    font-size: 12px;
+    color: #828a9b;
+    margin-bottom: 20px;
+}
 
+.title_text{
+    font-weight: bold;
+    font-size: 18px;
+    color: #050c33;
+    line-height: 1.22;
+    margin-bottom: 15px;
+}
+
+.wrapper{
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #333;
 }
 
 .header{
-
+    display: block;
 }
 
 .body{
-
+    position: relative;
+    z-index: 10;
+    font-weight: 500;
+    font-size: 16px;
+    color: #4e5a73;
+    line-height: 1.37;
 }
 
 .image{
-
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
 }

@@ -8,10 +8,10 @@ export default class AdvantageItem extends React.Component {
             <div className={styles.block}>
                 <div className={styles.wrapper}>
                     <div className={styles.header}>
-                        <div>
+                        <div className={styles.id_number}>
                             {this.props.id}
                         </div>
-                        <div>
+                        <div className={styles.title_text}>
                             {this.props.title}
                         </div>
                     </div>
