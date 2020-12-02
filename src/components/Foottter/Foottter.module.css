@@ -1,0 +1,33 @@
+.socialNetworkImg {
+    width: 50px;
+    margin: 5px;
+    filter: invert(75%);
+}
+
+.footerGlobal {
+    background-color: #050c33;
+}
+
+.copyRight {
+    color: white;
+}
+
+.monoLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.copyRightAndLogo{
+    display: flex;
+    flex-direction: row;
+    columns: 2;
+    justify-content: space-between;
+}
+
+.botLogo{
+    position: relative;
+    bottom: -30px;
+    left: -30px;
+
+}
