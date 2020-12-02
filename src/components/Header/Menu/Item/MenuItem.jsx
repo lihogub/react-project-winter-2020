@@ -1,13 +1,14 @@
 import React from "react";
 import {NavItem, NavLink} from "react-bootstrap";
-import styles from "./MenuItem.module.css";
+
+
 export default class MenuItem extends React.Component {
     state = {
         hover: false
     }
 
     style = {
-        transition: "all 200ms ease-in",
+        transition: "200ms ease-in",
         color: "white"
     }
 
@@ -19,9 +20,10 @@ export default class MenuItem extends React.Component {
     onMouseLeave = () => this.state.hover ? this.setState({hover: false}) : null
 
     render() {
+        const styleButton = (this.state.hover || (this.props.id === 0)) ? {...this.style, ...this.styleHover} : this.style
         return (
             <NavItem id={this.props.id} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
-                <NavLink href={this.props.href} className={styles.menuItem} style={this.state.hover ? {...this.style, ...this.styleHover} : this.style}>
+                <NavLink href={this.props.href} style={styleButton}>
                     {this.props.text}
                 </NavLink>
             </NavItem>

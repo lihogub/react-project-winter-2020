@@ -1,66 +1,76 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .dropdown-menu {
-  background-color: #F14D34;
-  color: white;
-  padding: 0;
-}
-
-.dropdown-item {
-  background-color: #F14D34;
+    background-color: #F14D34;
+    color: white;
+    padding: 0;
 }
 
 .dropdown-toggle {
-  color: white !important;
+    color: white !important;
+    transition: 200ms ease-in;
 }
 
-.dropdown-toggle:hover {
-  color: white;
+.dropdown-item {
+    background-color: #F14D34;
 }
 
 .dropdown-item:hover {
-  background-color: red;
+    background-color: red;
+    transition: 200ms ease-in;
 }
 
-.dropdown-item:active {
-  background-color: darkred;
+.dropdown-item.active {
+    color: red;
+    transition: 200ms ease-in;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.navbar-toggler {
+    border: none !important;
 }
 
 @media (max-width: 768px) {
-  .dropdown-item {
-    color: white;
-    background-color: rgba(0, 0, 0, 0);
-    border-top: gray 1px solid;
-  }
 
-  .dropdown-item:hover {
-    color: red;
-    background-color: rgba(0, 0, 0, 0);
-  }
+    .dropdown-item {
+        color: white;
+        background-color: rgba(0, 0, 0, 0) !important;
+        border-top: rgba(255, 255, 255, 0.2) 1px solid;
+    }
 
-  .dropdown-menu {
-    color: white;
-    background-color: rgba(0, 0, 0, 0);
-  }
+    .dropdown-item:hover {
+        color: #F14D34 !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
 
-  .dropdown-menu {
-    display: block;
-  }
+    .nav-link:first-of-type:not(.dropdown-toggle) {
+        color: #F14D34 !important;
+    }
 
-  .nav-link {
-    color: white !important;
-  }
+    .dropdown-menu {
+        color: white;
+        display: block;
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+    .nav-link {
+        color: white !important;
+        border-top: rgba(255, 255, 255, 0.2) 1px solid;
+    }
+
+    .nav-link:hover {
+        color: #F14D34 !important;
+    }
 
 }
