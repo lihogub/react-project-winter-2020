@@ -1,0 +1,13 @@
+.description{
+    padding: 0;
+    fontWeight: 500;
+    fontSize: 12px;
+    lineHeight: 1.37;
+    marginBottom: 5px;
+}
+
+@media screen and (min-width: 800px) and (orientation: landscape) {
+    .description {
+        fontSize: 16px;
+    }
+}

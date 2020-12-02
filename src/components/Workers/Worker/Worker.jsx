@@ -10,6 +10,7 @@ imageStyle = {
 }
 
 cardStyle = {
+    maxWidth: '280px',
     backgroundColor: '#AAFFF3',
     textAlign: 'left',
     marginBottom: '70px'
@@ -19,23 +20,21 @@ titleStyle = {
     fontWeight: 'bold',
     fontSize: '16px',
     lineHeight: '1.37',
-    color: '#050c33',
     display: 'inline-block',
     marginBottom: '5px'
 }
 
-textStyle = {
-    padding: '0',
-    color: '#505570',
-    fontWeight: '500',
-    fontSize: '16px',
-    lineHeight: '1.37',
-    marginBottom: '5px'
-}
+// textStyle = {
+//     padding: '0',
+//     fontWeight: '500',
+//     fontSize: '12px',
+//     lineHeight: '1.37',
+//     marginBottom: '5px'
+// }
 
     render() {
         return (
-            <div className='p-3 padding-left-0 padding-right-0' style={this.cardStyle}>
+            <div style={this.cardStyle}>
                 <div className='col m-0 p-0'>
                     <div className='row justify-content-center m-0 p-0'>
                         <img
@@ -45,14 +44,12 @@ textStyle = {
                             alt='photo'
                         />
                     </div>
-                        <div style={this.titleStyle}>
-                            {this.props.name}
-                        </div>
-                        <div style={this.textStyle}>
-                            {this.props.job}
-                        </div>
-                    {/*<div className='row m-0 p-0'>*/}
-                    {/*</div>*/}
+                    <div style={this.titleStyle}>
+                        {this.props.name}
+                    </div>
+                    <div /*style={this.textStyle}*/ className={styles.description}>
+                        {this.props.job}
+                    </div>
                 </div>
             </div>
         )
