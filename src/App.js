@@ -9,11 +9,11 @@ import Advantage from "./components/Advantage/Advantage";
 export default class App extends React.Component {
     render() {
         return (
-            <Container fluid={true}>
+            <Container fluid={true} className="p-0">
                 <Header/>
-                <Advantage/>
+                {/*<Advantage/>
                 <Workers/>
-                <Competency/>
+                <Competency/>*/}
             </Container>
         )
     }
