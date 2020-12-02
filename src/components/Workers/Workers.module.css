@@ -1,0 +1,12 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.wrapper{
+    display: block;
+    font-size: 16px;
+    line-height: 1.42857143;
+    text-align: center;
+}
