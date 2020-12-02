@@ -3,6 +3,7 @@
     .menuItem {
         border-top: gray 1px solid;
         box-shadow: 0px 0px 0px 0px !important;
+        color: white;
     }
 
 }

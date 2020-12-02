@@ -41,7 +41,7 @@ export default class Menu extends React.Component {
                 } else {
                     const nestedItems = item.drop.map(
                         (nestedItem, index, _) =>
-                            <NavDropdown.Item key={index} href={nestedItem.ref} children={nestedItem.text}/>
+                            <NavDropdown.Item style={{color: "white"}} key={index} href={nestedItem.ref} children={nestedItem.text}/>
                     )
                     return <NavDropdown id={item.id} title={item.text} show={true} children={nestedItems}/>
                 }
