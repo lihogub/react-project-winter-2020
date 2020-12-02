@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import styles from "./Worker.module.css";
 
 export default class Worker extends React.Component {
 
@@ -12,17 +13,17 @@ export default class Worker extends React.Component {
 
     render() {
         return (
-            <Card style={this.styleCard}>
-                <Card.Img variant="top" src={this.props.imageUrl} className="Img"/>
-                <Card.Body>
-                    <Card.Title>
+            <div style={this.styleCard}>
+                <img variant="top" src={this.props.imageUrl} className="Img"/>
+                <div>
+                    <div>
                         <div>{this.props.name}</div>
-                    </Card.Title>
-                    <Card.Text>
+                    </div>
+                    <div>
                         {this.props.job}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+                    </div>
+                </div>
+            </div>
         )
     }
 
