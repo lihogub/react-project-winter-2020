@@ -11,7 +11,7 @@ imageStyle = {
 
 cardStyle = {
     maxWidth: '280px',
-    backgroundColor: '#AAFFF3',
+    // backgroundColor: '#AAFFF3',
     textAlign: 'left',
     marginBottom: '70px'
 }
@@ -49,6 +49,9 @@ titleStyle = {
                     </div>
                     <div /*style={this.textStyle}*/ className={styles.description}>
                         {this.props.job}
+                    </div>
+                    <div className={styles.team}>
+                        {this.props.team}
                     </div>
                 </div>
             </div>
