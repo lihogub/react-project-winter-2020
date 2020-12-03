@@ -64,10 +64,26 @@ export default class Workers extends React.Component {
 
                         </div>
                     </div>
-                    <div className='form-group'>
-                        <a href='/team'>
+                    <div className='row justify-content-center m-0 p-0'>
+
+                        <button
+                            type="button"
+                            className="btn btn-outline-secondary"
+                            data-toggle="button"
+                            aria-pressed="false"
+                            style={{
+                                fontStyle: "normal",
+                                fontWeight: "500",
+                                fontSize: "12px",
+                                textTransform: "uppercase",
+                                color: "#050c33",
+                                padding: "24px 75px",
+                                marginBottom: "120px"
+                            }}
+                        >
                             Вся команда
-                        </a>
+                        </button>
+
                     </div>
                 </div>
             </div>
