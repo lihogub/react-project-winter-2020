@@ -1,20 +1,26 @@
 .socialNetworkImg {
     width: 30px;
-    margin-right: 2vw;
-    margin-bottom: 1vw;
     filter: invert(100%);
 }
 
 .footerGlobal {
     background-color: black;
-    padding-top: 5vw;
-    padding-left: 5vw;
+    overflow: hidden;
+
+    background-image: url(../../res/images/drupal-coder-bg.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .linksAndText {
 }
 
 .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 5vw;
 }
 
 .copyRight {
@@ -23,12 +29,13 @@
 
 .cropped {
     position: relative;
-    text-align: right;
-    overflow: hidden;
+    bottom: -20vw;
+    right: -10vw;
 }
 
 .cropped img {
-    margin: 0px -3% -15% 0px;
+    z-index: 2;
+    /*margin: 0px -20% -55% 0px;*/
     transform: rotate(-20deg);
-    width: 33vw;
+    width: 30vw;
 }
