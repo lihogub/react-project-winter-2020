@@ -48,7 +48,7 @@ export default class Menu extends React.Component {
                                               href={nestedItem.ref} key={index} style={{fontSize: "13px"}}/>
                     )
                     return <NavDropdown id={item.id} style={{textIndent: "20px"}} title={item.text} show={true}
-                                        children={nestedItems}/>
+                                        children={nestedItems} key={index}/>
                 }
             }
         )
