@@ -25,6 +25,15 @@
 
 .navbar-toggler {
     border: none !important;
+    outline: none !important;
+}
+
+.navbar-toggler-icon {
+    outline: none !important;
+}
+
+.navbar-toggler:focus {
+    margin-bottom: -5px;
 }
 
 @media (max-width: 765px) {
