@@ -70,7 +70,7 @@ export default class Menu extends React.Component {
                 </div>
                 <div className="d-flex d-md-none container-fluid fixed-bottom p-1" style={{backgroundColor: "black"}}>
                     <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center"
-                                     style={{maxHeight: "calc(100vh - 45px)", overflowY: "scroll", borderBottom: "white 1px solid"}}>
+                                     style={{maxHeight: "calc(100vh - 45px)", overflowY: "auto", borderBottom: "white 1px solid"}}>
                         <Nav className="d-block d-md-none px-0 px-md-2">
                             {this.createLinksMobile(this.state)}
                         </Nav>
