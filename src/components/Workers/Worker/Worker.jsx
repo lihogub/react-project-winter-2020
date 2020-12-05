@@ -1,28 +1,60 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import styles from "./Worker.module.css";
 
 export default class Worker extends React.Component {
 
-    styleCard = {
-        width: "280px",
-        padding: "10px",
-        margin: "20px",
-        border: "0px"
-    }
+imageStyle = {
+    maxWidth: '100%',
+    height: 'auto'
+}
+
+cardStyle = {
+    maxWidth: '280px',
+    // backgroundColor: '#AAFFF3',
+    textAlign: 'left',
+    marginBottom: '70px'
+}
+
+titleStyle = {
+    fontWeight: 'bold',
+    fontSize: '16px',
+    lineHeight: '1.37',
+    display: 'inline-block',
+    marginBottom: '5px'
+}
+
+// textStyle = {
+//     padding: '0',
+//     fontWeight: '500',
+//     fontSize: '12px',
+//     lineHeight: '1.37',
+//     marginBottom: '5px'
+// }
 
     render() {
         return (
-            <Card style={this.styleCard}>
-                <Card.Img variant="top" src={this.props.imageUrl} className="Img"/>
-                <Card.Body>
-                    <Card.Title>
-                        <div>{this.props.name}</div>
-                    </Card.Title>
-                    <Card.Text>
+            <div style={this.cardStyle}>
+                <div className='col m-0 p-0'>
+                    <div className='row justify-content-center m-0 p-0'>
+                        <img
+                            className='mb-3'
+                            style={this.imageStyle}
+                            src={this.props.imageUrl}
+                            alt='photo'
+                        />
+                    </div>
+                    <div style={this.titleStyle}>
+                        {this.props.name}
+                    </div>
+                    <div /*style={this.textStyle}*/ className={styles.description}>
                         {this.props.job}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+                    </div>
+                    <div className={styles.team}>
+                        {this.props.team}
+                    </div>
+                </div>
+            </div>
         )
     }
 

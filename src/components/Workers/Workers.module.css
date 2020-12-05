@@ -1,0 +1,9 @@
+.content{
+    text-align: left;
+}
+
+.wrapper{
+    display: block;
+    line-height: 1.42857143;
+    text-align: center;
+}

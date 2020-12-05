@@ -10,15 +10,13 @@ import Foottter from "./components/Foottter/Foottter";
 export default class App extends React.Component {
     render() {
         return (
-            <div>
-                <Container fluid={true}>
-                    <Header/>
-                    <Advantage/>
-                    {/*<Workers/>*/}
-                    <Competency/>
-                </Container>
+            <Container fluid={true} className="px-0">
+                <Header/>
+                <Competency/>
+                <Advantage/>
+                <Workers/>
                 <Foottter/>
-            </div>
+            </Container>
         )
     }
 }

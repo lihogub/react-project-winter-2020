@@ -1,27 +1,32 @@
 import React from "react";
 import {NavItem, NavLink} from "react-bootstrap";
-import styles from "./MenuItem.module.css";
+
+
 export default class MenuItem extends React.Component {
+
     state = {
         hover: false
     }
 
     style = {
-        transition: "all 200ms ease-in",
-        color: "white"
+        transition: "200ms ease-in-out",
+        color: "white",
+        fontSize: "13px"
     }
 
     styleHover = {
         boxShadow: "0px 4px 0px 0px #F14D34"
     }
 
-    onMouseEnter = () => this.state.hover ? null : this.setState({hover: true})
-    onMouseLeave = () => this.state.hover ? this.setState({hover: false}) : null
+    hoverOn = () => this.state.hover ? null : this.setState({hover: true})
+    hoverOff = () => this.state.hover ? this.setState({hover: false}) : null
+    hoverToggle = () => this.state.hover ? this.hoverOff() : this.hoverOn()
 
     render() {
+        const styleButton = (this.state.hover || this.props.isActive) ? {...this.style, ...this.styleHover} : this.style
         return (
-            <NavItem id={this.props.id} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
-                <NavLink href={this.props.href} className={styles.menuItem} style={this.state.hover ? {...this.style, ...this.styleHover} : this.style}>
+            <NavItem id={this.props.id} onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff}>
+                <NavLink className="p-0 m-2" href={this.props.href} style={styleButton}>
                     {this.props.text}
                 </NavLink>
             </NavItem>
