@@ -11,9 +11,9 @@ export default class App extends React.Component {
         return (
             <Container fluid={true} className="px-0">
                 <Header/>
-                {/*<Competency/>
+                <Competency/>
                 <Advantage/>
-                <Workers/>*/}
+                <Workers/>
             </Container>
         )
     }

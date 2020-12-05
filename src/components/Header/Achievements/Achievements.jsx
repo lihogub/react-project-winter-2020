@@ -18,12 +18,14 @@ export default class Achievements extends React.Component {
 
     render() {
         return (
-            <div className="row d-flex px-0">
-                {
-                    this.state.jsonData.map(
-                        (item) => <AchievementItem title={item.title} text={item.desc} key={item.id} isLarge={item.id === 0}/>
-                    )
-                }
+            <div className="container-fluid d-flex px-0 py-5">
+                <div className="row px-0">
+                    {
+                        this.state.jsonData.map(
+                            (item) => <AchievementItem title={item.title} text={item.desc} key={item.id} isLarge={item.id === 0}/>
+                        )
+                    }
+                </div>
             </div>
         )
     }
