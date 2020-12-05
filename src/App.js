@@ -5,6 +5,7 @@ import {Container} from "react-bootstrap";
 import Competency from "./components/Competency/Competency";
 import Workers from "./components/Workers/Workers";
 import Advantage from "./components/Advantage/Advantage";
+import Foottter from "./components/Foottter/Foottter";
 
 export default class App extends React.Component {
     render() {
@@ -14,6 +15,7 @@ export default class App extends React.Component {
                 <Competency/>
                 <Advantage/>
                 <Workers/>
+                <Foottter/>
             </Container>
         )
     }

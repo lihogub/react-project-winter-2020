@@ -1,0 +1,80 @@
+.footerGlobal {
+    overflow: hidden;
+    background-color: black;
+}
+
+/* xs */
+.bgImg {
+    background-repeat: no-repeat;
+    background-image: url(../../res/images/new-dr-coder-bg.svg);
+    background-position: 105% 140%;
+    background-size: auto 25vw;
+
+    padding-bottom: 3vw;
+    padding-top: 3vw;
+}
+
+/* sm 450+ */
+@media (min-width: 400px) {
+    .bgImg {
+        background-position: 103% 180%;
+
+        background-size: auto 24vw;
+    }
+}
+
+/* sm 570+ */
+@media (min-width: 570px) {
+    .bgImg {
+        background-position: 103% -180%;
+
+        background-size: auto 22vw;
+    }
+}
+
+/* sm-md 780+ */
+@media (min-width: 780px) {
+    .bgImg {
+        background-position: 103% -85%;
+
+        background-size: auto 20vw;
+    }
+}
+
+/* md 992+ */
+@media (min-width: 992px) {
+    .bgImg {
+        background-position: 103% -110%;
+
+        background-size: auto 20vw;
+    }
+}
+
+/* lg 1200+ */
+@media (min-width: 1200px) {
+    .bgImg {
+        background-position: 103% -40%;
+
+        background-size: auto 20vw;
+    }
+}
+
+.socialNetwork img {
+    width: 30px;
+    filter: invert(100%);
+}
+
+.socialNetwork {
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.copyRight {
+    color: white;
+}
