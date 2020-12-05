@@ -1,0 +1,30 @@
+.icon{
+    z-index: 1;
+    opacity: 1.0;
+
+    position: relative;
+
+    height: 81px;
+    width: 81px;
+
+    top: 5px;
+    left: 5px;
+}
+
+.bg_image {
+    z-index: 0;
+    opacity: 0.12;
+
+    height: 230px;
+    width: 230px;
+    max-height: 91px;
+    max-width: 91px;
+
+    position: absolute;
+    top: 20px;
+    left: -10px;
+}
+
+.common{
+    padding: 5px;
+}
