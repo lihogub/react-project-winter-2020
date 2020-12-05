@@ -11,7 +11,12 @@ export default class CompetencyItem extends React.Component {
                     <img className={styles.icon} src={this.props.imageUrl} alt="competency-icon"/>
                     <img className={styles.bg_image} src={BGImg} alt="drupal-overlay-icon"/>
                 </div>
-                <div className='m-3'>
+                <div
+                    className={`${styles.description} ${'m-3'}`}
+                    style={{
+                        maxWidth: "160px"
+                    }}
+                >
                     {this.props.text}
                 </div>
             </div>
