@@ -1,0 +1,29 @@
+.headerTitle {
+    font-size: 50px;
+    color: white;
+}
+
+.headerText {
+    color: white;
+    opacity: 0.75;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+@media (max-width: 768px) {
+    .headerTitle {
+        font-size: 40px;
+    }
+    .headerText {
+        font-size: 17px;
+    }
+}
+@media (max-width: 576px) {
+    .headerTitle {
+        font-size: 24px;
+    }
+    .headerText {
+        font-size: 16px;
+    }
+}
+
