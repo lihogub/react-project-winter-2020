@@ -12,7 +12,7 @@ export default class App extends React.Component {
         return (
             <div>
                 <Container fluid={true}>
-                    {/*<Header/>*/}
+                    <Header/>
                     <Advantage/>
                     {/*<Workers/>*/}
                     <Competency/>
