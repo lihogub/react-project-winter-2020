@@ -9,13 +9,17 @@ import competencyImg6 from "../../res/images/competency-6.svg";
 import competencyImg7 from "../../res/images/competency-7.svg";
 import competencyImg8 from "../../res/images/competency-8.svg";
 import styles from "./Competency.module.css";
+import Header from "../Header/Header";
+import {Container} from "react-bootstrap";
 
 
 export default class Competency extends React.Component {
 
     render() {
         return (
-            <div className='container'>
+            <div className='container' style={{
+                padding: "118px 0"
+            }}>
                 <div className='row'>
                     <div className='col-md-6'>
                         <h2 className={styles.title}>

@@ -8,23 +8,31 @@ import supportImage5 from "./../../res/images/support5.svg"
 import supportImage6 from "./../../res/images/support6.svg"
 import supportImage7 from "./../../res/images/support7.svg"
 import supportImage8 from "./../../res/images/support8.svg"
+import styles from "./Advantage.module.css";
 
 export default class Advantage extends React.Component {
 
     render() {
         return (
             <div className='container'>
-                <h2 style={{
-                    textAlign: "center",
-                    fontWeight: "bold",
-                    fontSize: "42px",
-                    color: "#050c33",
-                    marginBottom: "80px",
-                    marginTop: "130px"
-                }}>
-                    Поддержка от Drupal-coder
-                </h2>
-                <div className='row row-flex'>
+                <div className='row'>
+                    <div className='col-md-12'>
+                        <h2 className={styles.title}>
+                            Поддержка от Drupal-coder
+                        </h2>
+                        {/*<h2 style={{*/}
+                        {/*    textAlign: "center",*/}
+                        {/*    fontWeight: "bold",*/}
+                        {/*    fontSize: "42px",*/}
+                        {/*    color: "#050c33",*/}
+                        {/*    marginBottom: "80px",*/}
+                        {/*    // marginTop: "130px"*/}
+                        {/*}}>*/}
+                        {/*    Поддержка от Drupal-coder*/}
+                        {/*</h2>*/}
+                    </div>
+                </div>
+                <div className='row row-flex p-2'>
                     <div className='col-sm-6 col-md-3 col-xs-12'>
                         <AdvantageItem
                             id='01.'

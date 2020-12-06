@@ -26,7 +26,7 @@ export default class MenuItem extends React.Component {
         const styleButton = (this.state.hover || this.props.isActive) ? {...this.style, ...this.styleHover} : this.style
         return (
             <NavItem id={this.props.id} onMouseEnter={this.hoverOn} onMouseLeave={this.hoverOff}>
-                <NavLink href={this.props.href} style={styleButton}>
+                <NavLink className="p-0 m-2" href={this.props.href} style={styleButton}>
                     {this.props.text}
                 </NavLink>
             </NavItem>

@@ -48,7 +48,7 @@ export default class Menu extends React.Component {
                                               href={nestedItem.ref} key={index} style={{fontSize: "13px"}}/>
                     )
                     return <NavDropdown id={item.id} style={{textIndent: "20px"}} title={item.text} show={true}
-                                        children={nestedItems}/>
+                                        children={nestedItems} key={index}/>
                 }
             }
         )
@@ -68,8 +68,9 @@ export default class Menu extends React.Component {
                         </Row>
                     </Navbar.Collapse>
                 </div>
-                <div className="d-flex d-md-none container-fluid fixed-bottom" style={{backgroundColor: "black"}}>
-                    <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center">
+                <div className="d-flex d-md-none container-fluid fixed-bottom p-1" style={{backgroundColor: "black"}}>
+                    <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center"
+                                     style={{maxHeight: "calc(100vh - 45px)", overflowY: "auto", borderBottom: "white 1px solid"}}>
                         <Nav className="d-block d-md-none px-0 px-md-2">
                             {this.createLinksMobile(this.state)}
                         </Nav>
@@ -77,7 +78,7 @@ export default class Menu extends React.Component {
                     <Navbar.Brand href="#main" className="align-items-center justify-content-center mx-3">
                         <Image src={drupalCoderImg} width="170px"/>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mx-2"/>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mx-1 px-0"/>
                 </div>
             </Navbar>
         )
