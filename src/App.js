@@ -17,7 +17,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <Container fluid={true} className="px-0">
+            <Container fluid={true} className="px-0 overflow-hidden">
                 <Header/>
                 <div style={this.style}>
                     <Competency/>

@@ -20,17 +20,22 @@ export default class Header extends React.Component {
     }
 
     videoStyle = {
-        width: "100%",
-        overflow: "none",
         position: "absolute",
         top: 0,
+        right: 0,
+        left: 0,
+        minWidth: "100%",
+        minHeight: "100%",
+        width: "auto",
+        height: "auto",
         zIndex: -500,
-        filter: "blur(5px)"
+        filter: "blur(3px)",
+        transform: "scale(1.04)",
     }
 
     render() {
         return (
-            <div style={this.style} className="container-fluid px-0 px-md-0">
+            <div style={this.style} className="container-fluid px-0 px-md-0 position-relative">
                 <Menu/>
                 <div className="container pt-5 pb-4">
                     <div className="row d-flex">
@@ -58,8 +63,8 @@ export default class Header extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid px-0 mx-0">
-                    <video src={headerVideo} autoPlay={true} loop={true} muted={true} style={this.videoStyle}/>
+                <div className="container-fluid px-0 mx-0 overflow-hidden">
+                    <video playsInline={true} src={headerVideo} autoPlay={true} loop={true} muted={true} style={this.videoStyle}/>
                 </div>
             </div>
         )
