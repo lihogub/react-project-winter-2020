@@ -11,7 +11,8 @@ export default class MenuItem extends React.Component {
     style = {
         transition: "200ms ease-in-out",
         color: "white",
-        fontSize: "13px"
+        fontSize: "13px",
+        fontWeight: 500
     }
 
     styleHover = {

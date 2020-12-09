@@ -1,9 +1,7 @@
 import React from "react";
-import headerBGImg from "../../res/images/headerBG.png";
 import Menu from "./Menu/Menu";
 import Achievements from "./Achievements/Achievements";
 import styles from "./Header.module.css";
-import {Button} from "react-bootstrap";
 import headerVideo from "../../res/images/video.mp4";
 
 export default class Header extends React.Component {
@@ -63,7 +61,7 @@ export default class Header extends React.Component {
                 </div>
                 <div className="container-fluid px-0 mx-0 overflow-hidden">
                     <video preload="none" playsInline={true} autoPlay={true} loop={true} muted={true}
-                           style={this.videoStyle} poster={headerBGImg}>
+                           style={this.videoStyle}>
                         <source src={headerVideo} type="video/mp4"/>
                     </video>
                 </div>

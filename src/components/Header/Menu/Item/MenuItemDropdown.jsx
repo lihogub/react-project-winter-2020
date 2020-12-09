@@ -11,7 +11,8 @@ export default class MenuItem extends React.Component {
     style = {
         transition: "all 0.2s ease-in",
         color: "white",
-        fontSize: "13px"
+        fontSize: "13px",
+        fontWeight: 500
     }
 
     hoverOn = () => this.state.hover ? null : this.setState({hover: true})

@@ -40,14 +40,14 @@ export default class Menu extends React.Component {
             (item, index, _) => {
                 if (item.drop.length === 0) {
                     return <Nav.Link id={item.id} key={item.id} href={item.ref} children={item.text}
-                                     style={{textIndent: "20px"}} className="py-2"/>
+                                     style={{textIndent: "20px", fontWeight: 500}} className="py-2"/>
                 } else {
                     const nestedItems = item.drop.map(
                         (nestedItem, index, _) =>
                             <NavDropdown.Item children={nestedItem.text} className="text-white py-2 px-3"
-                                              href={nestedItem.ref} key={index} style={{fontSize: "13px"}}/>
+                                              href={nestedItem.ref} key={index} style={{fontSize: "13px", fontWeight: 500}}/>
                     )
-                    return <NavDropdown id={item.id} style={{textIndent: "20px"}} title={item.text} show={true}
+                    return <NavDropdown id={item.id} style={{textIndent: "20px", fontWeight: 500}} title={item.text} show={true}
                                         children={nestedItems} key={index}/>
                 }
             }
@@ -57,7 +57,7 @@ export default class Menu extends React.Component {
         return (
             <Navbar collapseOnSelect expand="md" variant="dark"
                     className="py-0 px-0 px-md-2 container-fluid container-md justify-content-md-start">
-                <div className="d-none d-md-flex container justify-content-md-start">
+                <div className="d-none d-md-flex my-4 container justify-content-md-start">
                     <Navbar.Brand href="#main" className="align-items-center justify-content-center">
                         <Image src={drupalCoderImg} width="170px"/>
                     </Navbar.Brand>

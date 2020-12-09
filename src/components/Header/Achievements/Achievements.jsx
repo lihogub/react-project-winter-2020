@@ -18,7 +18,7 @@ export default class Achievements extends React.Component {
 
     render() {
         return (
-            <div className="container-fluid d-flex px-0 py-5">
+            <div className="container-fluid d-flex px-0 py-4">
                 <div className="row px-0">
                     {
                         this.state.jsonData.map(
