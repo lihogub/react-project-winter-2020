@@ -16,7 +16,7 @@ export default class Header extends React.Component {
     buttonStyle = {
         border: "#F14D34 2px solid",
         color: "white",
-        fontSize: "13px"
+        fontSize: "13px",
     }
 
     videoStyle = {
@@ -47,9 +47,9 @@ export default class Header extends React.Component {
                                     </h5>
                                 </div>
                                 <div className="col-12 d-flex justify-content-center justify-content-md-start">
-                                    <Button variant="outline-primary" className="col-8 col-md-5 mt-4 mx-0 py-3" style={this.buttonStyle}>
+                                    <div className={`col-8 col-md-5 mt-4 mx-0 py-3 btn btn-outline-primary ${styles.button}`} style={this.buttonStyle}>
                                         ТАРИФЫ
-                                    </Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,9 @@ export default class Header extends React.Component {
                     </div>
                 </div>
                 <div className="container-fluid px-0 mx-0 overflow-hidden">
-                    <video playsInline={true} src={headerVideo} autoPlay={true} loop={true} muted={true} style={this.videoStyle}/>
+                    <video preload="none" playsInline={true}autoPlay={true} loop={true} muted={true} style={this.videoStyle}>
+                        <source src={headerVideo} />
+                    </video>
                 </div>
             </div>
         )
