@@ -41,13 +41,16 @@ export default class Header extends React.Component {
                                         Поддержка <br/>сайтов на Drupal
                                     </h1>
                                 </div>
-                                <div className="col-12 pt-2 pb-3 d-flex justify-content-center justify-content-md-start">
+                                <div
+                                    className="col-12 pt-2 pb-3 d-flex justify-content-center justify-content-md-start">
                                     <h5 className={`text-center text-md-left ${styles.headerText}`}>
                                         Сопровождение и поддержка сайтов <br/>на CMS Drupal любых версий и запущенности
                                     </h5>
                                 </div>
                                 <div className="col-12 d-flex justify-content-center justify-content-md-start">
-                                    <div className={`col-8 col-md-5 mt-4 mx-0 py-3 btn btn-outline-primary ${styles.button}`} style={this.buttonStyle}>
+                                    <div
+                                        className={`col-8 col-md-5 mt-4 mx-0 py-3 btn btn-outline-primary ${styles.button}`}
+                                        style={this.buttonStyle}>
                                         ТАРИФЫ
                                     </div>
                                 </div>
@@ -59,8 +62,9 @@ export default class Header extends React.Component {
                     </div>
                 </div>
                 <div className="container-fluid px-0 mx-0 overflow-hidden">
-                    <video preload="none" playsInline={true}autoPlay={true} loop={true} muted={true} style={this.videoStyle}>
-                        <source src={headerVideo} />
+                    <video preload="none" playsInline={true} autoPlay={true} loop={true} muted={true}
+                           style={this.videoStyle} poster={headerBGImg}>
+                        <source src={headerVideo} type="video/mp4"/>
                     </video>
                 </div>
             </div>
