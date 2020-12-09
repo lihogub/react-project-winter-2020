@@ -22,15 +22,10 @@ export default class Header extends React.Component {
     videoStyle = {
         position: "absolute",
         top: 0,
-        right: 0,
-        left: 0,
         minWidth: "100%",
         minHeight: "100%",
-        width: "auto",
-        height: "auto",
-        zIndex: -500,
-        filter: "blur(3px)",
-        transform: "scale(1.04)",
+        zIndex: -100,
+        filter: "blur(5px)",
     }
 
     render() {
