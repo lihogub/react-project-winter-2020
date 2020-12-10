@@ -20,16 +20,14 @@
 
 .bg_image {
     z-index: 0;
-    opacity: 0.12;
+    opacity: 0.1;
 
-    height: 230px;
-    width: 230px;
-    max-height: 91px;
-    max-width: 91px;
+    height: 100px;
+    width: 100px;
 
     position: absolute;
-    top: 20px;
-    left: -10px;
+    top: 15px;
+    left: -15px;
 }
 
 .common{

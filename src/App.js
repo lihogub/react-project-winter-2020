@@ -19,7 +19,7 @@ export default class App extends React.Component {
         return (
             <Container fluid={true} className="px-0 overflow-hidden">
                 <Header/>
-                <div style={this.style}>
+                <div style={this.style} className="px-3">
                     <Competency/>
                     <Advantage/>
                     <Execution/>
