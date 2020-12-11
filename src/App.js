@@ -7,6 +7,7 @@ import Workers from "./components/Workers/Workers";
 import Advantage from "./components/Advantage/Advantage";
 import Execution from "./components/Execution/Execution";
 import Foottter from "./components/Foottter/Foottter";
+import Rates from "./components/Rates/Rates";
 
 export default class App extends React.Component {
 
@@ -22,6 +23,7 @@ export default class App extends React.Component {
                 <div style={this.style} className="px-3">
                     <Competency/>
                     <Advantage/>
+                    <Rates/>
                     <Execution/>
                     <Workers/>
                 </div>

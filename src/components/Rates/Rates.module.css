@@ -1,0 +1,15 @@
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #050c33;
+    margin-bottom: 80px;
+}
+
+
+@media screen and (min-width: 800px) and (orientation: landscape) {
+    .title {
+        font-size: 42px;
+        justify-self: start;
+    }
+}
