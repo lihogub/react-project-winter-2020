@@ -2,7 +2,6 @@ import React from "react";
 import Menu from "./Menu/Menu";
 import Achievements from "./Achievements/Achievements";
 import styles from "./Header.module.css";
-import headerVideo from "../../res/images/video.mp4";
 
 export default class Header extends React.Component {
 
@@ -62,7 +61,7 @@ export default class Header extends React.Component {
                 <div className="container-fluid px-0 mx-0 overflow-hidden">
                     <video preload="none" playsInline={true} autoPlay={true} loop={true} muted={true}
                            style={this.videoStyle}>
-                        <source src={headerVideo} type="video/mp4"/>
+                        <source src={`${process.env.PUBLIC_URL}/videos/video.mp4`} type="video/mp4"/>
                     </video>
                 </div>
             </div>

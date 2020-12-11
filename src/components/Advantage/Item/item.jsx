@@ -8,7 +8,7 @@ export default class AdvantageItem extends React.Component {
             <div className={styles.block}>
                     <div className={styles.header}>
                         <div className={styles.id_number}>
-                            {this.props.id}
+                            {`0${this.props.id}.`}
                         </div>
                         <div className={styles.title_text}>
                             {this.props.title}
@@ -18,7 +18,7 @@ export default class AdvantageItem extends React.Component {
                         {this.props.text}
                     </div>
                     <div className={styles.image}>
-                        <img src={this.props.imageUrl}/>
+                        <img src={this.props.imageUrl} alt="advantage icon"/>
                     </div>
             </div>
         )

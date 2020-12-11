@@ -47,7 +47,7 @@ export default class AchievementItem extends React.Component {
                     <h3 className="py-0 my-0" style={this.titleLargeStyle}>
                         {this.props.title}
                     </h3>
-                    {this.props.isLarge ? <img src={cupImg} alt="cup image" height="60px" className="mt-n2"/> : null}
+                    {this.props.isLarge ? <img src={cupImg} alt="cup icon" height="60px" className="mt-n2"/> : null}
                 </div>
                 <p className="py-0 pb-1 my-0 px-0 mx-0 pr-2" style={this.textStyle}>
                     {this.props.text}

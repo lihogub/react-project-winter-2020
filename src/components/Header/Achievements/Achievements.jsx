@@ -10,10 +10,13 @@ export default class Achievements extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(endpoint).then(
-            (res) => this.setState({jsonData: res.data}),
-            (err) => alert(err)
-        )
+        axios.get(endpoint)
+            .then(
+                (res) => this.setState({jsonData: res.data})
+            )
+            .catch(
+                (err) => alert("Network error: " + err)
+            )
     }
 
     render() {
