@@ -8,6 +8,7 @@ import Advantage from "./components/Advantage/Advantage";
 import Execution from "./components/Execution/Execution";
 import Foottter from "./components/Foottter/Foottter";
 import Rates from "./components/Rates/Rates";
+import Testimonial from "./components/Testimonial/Testimonial";
 
 export default class App extends React.Component {
 
@@ -26,6 +27,7 @@ export default class App extends React.Component {
                     <Rates/>
                     <Execution/>
                     <Workers/>
+                    <Testimonial/>
                 </div>
                 <Foottter/>
             </Container>
