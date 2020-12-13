@@ -1,0 +1,15 @@
+.ContextAwareToggle {
+    background: transparent;
+}
+
+.globalCard {
+    border: 3px solid transparent;
+}
+
+.card-header {
+    border-bottom: 0px;
+}
+
+h5 {
+    font-weight: 1000;
+}
