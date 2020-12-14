@@ -1,13 +1,26 @@
 .headerTitle {
-    font-size: 50px;
+    font-size: 52px;
+    font-weight: bold;
     color: white;
 }
 
 .headerText {
     color: white;
     opacity: 0.75;
-    font-weight: 400;
-    font-size: 19px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.button:hover {
+    background-color: #F14D34 !important;
+}
+
+.button:active {
+    background-color: red !important;
+}
+
+.button:visited {
+    background-color: unset !important;
 }
 
 @media (max-width: 768px) {

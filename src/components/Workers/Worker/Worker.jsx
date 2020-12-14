@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
 import styles from "./Worker.module.css";
 
 export default class Worker extends React.Component {
@@ -11,7 +10,6 @@ imageStyle = {
 
 cardStyle = {
     maxWidth: '280px',
-    // backgroundColor: '#AAFFF3',
     textAlign: 'left',
     marginBottom: '70px'
 }
@@ -24,14 +22,6 @@ titleStyle = {
     marginBottom: '5px'
 }
 
-// textStyle = {
-//     padding: '0',
-//     fontWeight: '500',
-//     fontSize: '12px',
-//     lineHeight: '1.37',
-//     marginBottom: '5px'
-// }
-
     render() {
         return (
             <div style={this.cardStyle}>
@@ -41,18 +31,21 @@ titleStyle = {
                             className='mb-3'
                             style={this.imageStyle}
                             src={this.props.imageUrl}
-                            alt='photo'
+                            alt='worker'
                         />
                     </div>
                     <div style={this.titleStyle}>
                         {this.props.name}
                     </div>
-                    <div /*style={this.textStyle}*/ className={styles.description}>
+                    <div className={styles.description}>
                         {this.props.job}
                     </div>
-                    <div className={styles.team}>
-                        {this.props.team}
-                    </div>
+                    {
+                        this.props.team &&
+                        <div className={styles.team}>
+                            {this.props.team}
+                        </div>
+                    }
                 </div>
             </div>
         )
