@@ -1,9 +1,0 @@
-.globalCard {
-    border: 8px;
-}
-.Card.collapse.show {
-    background: #F14D34;
-}
-.Card.collapse:not(.show) {
-    background: cornflowerblue;
-}
