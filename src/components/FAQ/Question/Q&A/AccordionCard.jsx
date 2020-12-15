@@ -4,7 +4,7 @@ import React, {useContext} from "react";
 import styles from "./AccordionCard.module.css"
 import {AccordionContext, useAccordionToggle} from "react-bootstrap";
 
-function ContextAwareToggle({children, eventKey, callback}) {
+function CustomHeader({children, eventKey, callback}) {
     const currentEventKey = useContext(AccordionContext);
 
     const decoratedOnClick = useAccordionToggle(
@@ -22,10 +22,11 @@ function ContextAwareToggle({children, eventKey, callback}) {
                     color: isCurrentEventKey ? 'red' : 'black',
                     fontWeight: "bold",
                     backgroundColor: "transparent",
-                    borderLeft: isCurrentEventKey ? '3px solid red' : '3px solid transparent',
-                    borderRight: isCurrentEventKey ? '3px solid red' : '3px solid transparent',
-                    borderTop: isCurrentEventKey ? '3px solid red' : '3px solid transparent',
-                    borderBottom: 'transparent'
+                    borderLeft: isCurrentEventKey ? '3px solid #F14C36' : '3px solid transparent',
+                    borderRight: isCurrentEventKey ? '3px solid #F14C36' : '3px solid transparent',
+                    borderTop: isCurrentEventKey ? '3px solid #F14C36' : '3px solid transparent',
+                    borderBottom: 'transparent',
+                    paddingBottom: '5px'
                 }
             }
             onClick={decoratedOnClick}
@@ -39,11 +40,11 @@ export default class AccordionCard extends React.Component {
     render() {
         return (
             <Card className={styles.globalCard}>
-                <ContextAwareToggle eventKey={this.props.keyy}>
-                    <h6>
+                <CustomHeader eventKey={this.props.keyy}>
+                    <h5 className={styles.question}>
                         {this.props.keyy}.  {this.props.question}
-                    </h6>
-                </ContextAwareToggle>
+                    </h5>
+                </CustomHeader>
                 <Accordion.Collapse eventKey={this.props.keyy}>
                     <Card.Body className={styles.cardBody}>{this.props.answer}</Card.Body>
                 </Accordion.Collapse>

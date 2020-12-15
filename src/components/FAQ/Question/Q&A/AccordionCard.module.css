@@ -2,12 +2,17 @@
     border: 3px solid transparent;
 }
 
-.cardBody {
-    border-left: 3px solid red;
-    border-right: 3px solid red;
-    border-bottom: 3px solid red;
+.customCardHeader {
+    padding-bottom: 5px;
 }
 
-h6 {
-    font-weight: 1000;
+.cardBody {
+    border-left: 3px solid #F14C36;
+    border-right: 3px solid #F14C36;
+    border-bottom: 3px solid #F14C36;
+    padding-top: 5px;
+}
+
+.question {
+    font-weight: bold;
 }
