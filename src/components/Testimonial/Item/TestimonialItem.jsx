@@ -31,7 +31,7 @@ export default class TestimonialItem extends React.Component {
             <div className="px-2 py-2">
                 <img src={clientImageLink} className="py-3"/>
                 <p style={this.textStyle} className="pt-3 pb-1">
-                    {clientText}
+                    {`id ${this.props.id} ${clientText}`}
                 </p>
                 <p style={this.signStyle}>
                     {clientSign}
