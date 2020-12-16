@@ -58,7 +58,7 @@ export default class Testimonial extends React.Component {
             (item) => <TestimonialItem key={item.id} id={item.id} link={item.link} text={item.text} sign={item.sign}/>)
 
         return (
-            <div className={`container-fluid container-sm px-0 px-md-5 mb-5 pb-5 ${!this.state.slides.length && "d-none"}`}>
+            <div className={`container-fluid container-sm px-0 px-md-5 mb-5 pb-5`}>
                 <h1 className={`${styles.testimonialTitle} text-center mb-4 mb-md-5`}>
                     Отзывы
                 </h1>
@@ -75,7 +75,8 @@ export default class Testimonial extends React.Component {
                                     event.preventDefault();
                                     this.slider.slickPrev();
                                 }}>
-                                    <img src={arrowPng} className={`${styles.arrow} ${styles.arrowLeft}`} alt="prev-arrow"/>
+                                    <img src={arrowPng} className={`${styles.arrow} ${styles.arrowLeft}`}
+                                         alt="prev-arrow"/>
                                 </div>
                                 <div className="col-5 col-md-6 row d-flex justify-content-center">
                                     <div className={`${styles.slideCounter} d-flex`}>
@@ -94,7 +95,8 @@ export default class Testimonial extends React.Component {
                                     event.preventDefault();
                                     this.slider.slickNext();
                                 }}>
-                                    <img src={arrowPng} className={`${styles.arrow} ${styles.arrowRight}`} alt="next-arrow"/>
+                                    <img src={arrowPng} className={`${styles.arrow} ${styles.arrowRight}`}
+                                         alt="next-arrow"/>
                                 </div>
                             </div>
                         </div>

@@ -10,7 +10,7 @@ export default class Execution extends React.Component {
 
     render() {
         return (
-            <div className={`${'container'} ${styles.wrap}`}>
+            <div className={`container ${styles.wrap}`}>
                 <div className='row'>
                     <div className='col-md-12'>
                         <h2 className={styles.title}>

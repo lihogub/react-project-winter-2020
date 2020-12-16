@@ -7,9 +7,8 @@ export default class Rate extends React.Component {
 
     render() {
         return (
-            <div className={`container-fluid container-sm col-12 col-md-6 col-lg-4 d-flex d-md-block justify-content-center ${styles.top}`} style={{
+            <div className={`container-fluid container-sm p-3 col-12 col-md-6 col-lg-4 d-flex d-md-block justify-content-center ${styles.top}`} style={{
                 display: "inline-block",
-                padding: "15px",
                 margin: "0"
             }}>
                 <div className={`${styles.rate} py-4 py-lg-5`}>
@@ -21,18 +20,18 @@ export default class Rate extends React.Component {
                             </div>
                             <br/>
                         </div>
-
                         <div className={styles.body}>
-                            {this.props.desc.map(item =>
-                                <div className={styles.body_item}>
-                                    <img src={checkSvg} className="bi bi-check"/>
-                                    {item}
-                                </div>
+                            {this.props.desc.map(
+                                item =>
+                                    (
+                                        <div className={styles.body_item}>
+                                            <img src={checkSvg} className="bi bi-check"/>
+                                            {item}
+                                        </div>
+                                    )
                             )}
                         </div>
-
                         <br/>
-
                         <div className='row justify-content-center'>
                             <button
                                 type="button"
@@ -43,7 +42,6 @@ export default class Rate extends React.Component {
                                 СВЯЖИТЕСЬ С НАМИ!
                             </button>
                         </div>
-
                     </div>
                 </div>
             </div>

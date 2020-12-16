@@ -1,8 +1,28 @@
 import React from "react";
 import Rate from "./item/item";
 import styles from "./Rates.module.css";
+import axios from "axios";
+
+const endpoint = "https://react-warriors-rest-api.herokuapp.com/api/rate"
 
 export default class Rates extends React.Component {
+
+    state = {
+        rateData: []
+    }
+
+    componentDidMount() {
+        axios.get(endpoint)
+            .then(
+                (res) => {
+                    this.setState({rateData: res.data})
+                }
+            )
+            .catch(
+                (err) => alert("Network error " + err)
+            )
+    }
+
 
     componentStyle = {
         maxWidth: "1170px",
@@ -33,6 +53,17 @@ export default class Rates extends React.Component {
     }
 
     render() {
+        const rates = this.state.rateData.map(
+            (item) => (
+                <Rate
+                    key={item.id}
+                    title={item.title}
+                    desc={item.features}
+                    isActive={item.id === 1}
+                />
+            )
+        )
+
         return (
         <div className='container' style={this.componentStyle}>
             <div className='row'>
@@ -43,38 +74,7 @@ export default class Rates extends React.Component {
                 </div>
             </div>
             <div className='row d-flex flex-row justify-content-evenly' style={this.ratesStyle}>
-                <Rate
-                    title='Стартовый'
-                    desc={[
-                        "Консультации и работы по SEO",
-                        "Услуги дизайнера",
-                        "Неиспользованные оплаченные часы не переносятся",
-                        "Предоплата от 6 000 рублей в месяц"
-                    ]}
-                    isActive='false'
-                />
-                <Rate
-                    title='Бизнес'
-                    desc={[
-                        "Консультации и работы по SEO",
-                        "Услуги дизайнера",
-                        "Высокое время реакции - до 2 рабочих дней",
-                        "Неиспользованные оплаченные часы не переносятся",
-                        "Предоплата от 30 000 рублей в месяц"
-                    ]}
-                    isActive='true'
-                />
-                <Rate
-                    title='VIP'
-                    desc={[
-                        "Консультации и работы по SEO",
-                        "Услуги дизайнера",
-                        "Максимальное время реакции - в день обращения",
-                        "Неиспользованные оплаченные часы не переносятся",
-                        "Предоплата от 270 000 рублей в месяц"
-                    ]}
-                    isActive='false'
-                />
+                {rates}
             </div>
             <div className="container" style={this.additionalContainerStyle}>
                 <div className='text-center' style={this.additionalTextStyle}>
