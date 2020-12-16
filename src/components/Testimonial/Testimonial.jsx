@@ -75,7 +75,7 @@ export default class Testimonial extends React.Component {
                                     event.preventDefault();
                                     this.slider.slickPrev();
                                 }}>
-                                    <img src={arrowPng} className={`${styles.arrow} ${styles.arrowLeft}`}/>
+                                    <img src={arrowPng} className={`${styles.arrow} ${styles.arrowLeft}`} alt="prev-arrow"/>
                                 </div>
                                 <div className="col-5 col-md-6 row d-flex justify-content-center">
                                     <div className={`${styles.slideCounter} d-flex`}>
@@ -94,7 +94,7 @@ export default class Testimonial extends React.Component {
                                     event.preventDefault();
                                     this.slider.slickNext();
                                 }}>
-                                    <img src={arrowPng} className={`${styles.arrow} ${styles.arrowRight}`}/>
+                                    <img src={arrowPng} className={`${styles.arrow} ${styles.arrowRight}`} alt="next-arrow"/>
                                 </div>
                             </div>
                         </div>
