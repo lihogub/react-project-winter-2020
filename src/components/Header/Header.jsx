@@ -25,6 +25,14 @@ export default class Header extends React.Component {
         filter: "blur(5px)",
     }
 
+    state = {
+        isVideoShown: false
+    }
+
+    componentDidMount() {
+        setTimeout(()=>this.setState({isVideoShown: true}), 5000)
+    }
+
     render() {
         return (
             <div style={this.style} className="container-fluid px-0 px-md-0 position-relative">
@@ -58,12 +66,13 @@ export default class Header extends React.Component {
                         </div>
                     </div>
                 </div>
+                {this.state.isVideoShown &&
                 <div className="container-fluid px-0 mx-0 overflow-hidden">
                     <video preload="none" playsInline={true} autoPlay={true} loop={true} muted={true}
                            style={this.videoStyle}>
                         <source src={`${process.env.PUBLIC_URL}/videos/video.mp4`} type="video/mp4"/>
                     </video>
-                </div>
+                </div>}
             </div>
         )
     }

@@ -36,25 +36,25 @@ export default class Competency extends React.Component {
         )
 
         return (
-            <div className='container' style={{padding: "118px 0"}}>
-                <div className='row'>
-                    <div className='col-md-6'>
-                        <h2 className={styles.title}>
-                            13 лет совершенствуем
-                            компетенции в Друпал
-                            поддержке!
-                        </h2>
-                        <div className={styles.description}>
-                            Разрабатываем и оптимизируем модули, расширяем
-                            функциональность сайтов, обновляем дизайн
+                <div className='container' style={{padding: "118px 0"}}>
+                    <div className='row'>
+                        <div className='col-md-6'>
+                            <h2 className={styles.title}>
+                                13 лет совершенствуем
+                                компетенции в Друпал
+                                поддержке!
+                            </h2>
+                            <div className={styles.description}>
+                                Разрабатываем и оптимизируем модули, расширяем
+                                функциональность сайтов, обновляем дизайн
+                            </div>
                         </div>
                     </div>
+                    <div className='row row-cols-2 row-cols-md-4 row-cols-sm-2'>
+                        {competencies}
+                    </div>
                 </div>
-                <div className='row row-cols-2 row-cols-md-4 row-cols-sm-2'>
-                    {competencies}
-                </div>
-            </div>
-        )
+            )
     }
 
 }

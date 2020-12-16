@@ -4,12 +4,37 @@ import styles from "./Rates.module.css";
 
 export default class Rates extends React.Component {
 
+    componentStyle = {
+        maxWidth: "1170px",
+        paddingTop: "118px",
+    }
+
+    ratesStyle = {
+        marginBottom: "70px",
+        display: "relative",
+        zIndex: "0"
+    }
+
+    additionalContainerStyle = {
+        width: 500,
+        maxWidth: "100%"
+    }
+
+    additionalTextStyle = {
+    fontSize: "12pt",
+    color: "#828a9b",
+    }
+
+    additionalLinkStyle = {
+        textDecoration: "underline",
+        fontSize: "9pt",
+        lineHeight: "1.3",
+        color: "black"
+    }
+
     render() {
         return (
-        <div className='container' style={{
-            maxWidth: "1170px",
-            paddingTop: "118px",
-        }}>
+        <div className='container' style={this.componentStyle}>
             <div className='row'>
                 <div className='col-md-12'>
                     <h2 className={styles.title}>
@@ -17,11 +42,7 @@ export default class Rates extends React.Component {
                     </h2>
                 </div>
             </div>
-            <div className='row d-flex flex-row justify-content-evenly' style={{
-                marginBottom: "70px",
-                display: "relative",
-                zIndex: "0"
-            }}>
+            <div className='row d-flex flex-row justify-content-evenly' style={this.ratesStyle}>
                 <Rate
                     title='Стартовый'
                     desc={[
@@ -32,7 +53,6 @@ export default class Rates extends React.Component {
                     ]}
                     isActive='false'
                 />
-
                 <Rate
                     title='Бизнес'
                     desc={[
@@ -44,7 +64,6 @@ export default class Rates extends React.Component {
                     ]}
                     isActive='true'
                 />
-
                 <Rate
                     title='VIP'
                     desc={[
@@ -57,29 +76,17 @@ export default class Rates extends React.Component {
                     isActive='false'
                 />
             </div>
-            <div className=''>
-
-                <div className='text-center' style={{
-                    fontSize: "12pt",
-                    color: "#828a9b"
-                }}>
+            <div className="container" style={this.additionalContainerStyle}>
+                <div className='text-center' style={this.additionalTextStyle}>
                     Вам не подходят наши тарифы?
-                    Оставьте заявку и мы <br/> предложим вам индивидуальные условия!
+                    Оставьте заявку и мы предложим вам индивидуальные условия!
                 </div>
-
                 <br/>
-
                 <div className='text-center'>
-                    <a href='/' style={{
-                        textDecoration: "underline",
-                        fontSize: "9pt",
-                        lineHeight: "1.3",
-                        color: "black"
-                    }}>
+                    <a href='/' style={this.additionalLinkStyle}>
                         ПОЛУЧИТЬ ИНДИВИДУАЛЬНЫЙ ТАРИФ
                     </a>
                 </div>
-
             </div>
         </div>
         )

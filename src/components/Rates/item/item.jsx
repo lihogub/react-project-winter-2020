@@ -1,4 +1,5 @@
 import React from "react";
+import checkSvg from "../../../res/images/checkmark.svg";
 import styles from "./item.module.css";
 
 export default class Rate extends React.Component {
@@ -6,13 +7,13 @@ export default class Rate extends React.Component {
 
     render() {
         return (
-            <div className={`${'col-lg-4 col-sm-4'} ${styles.top}`} style={{
+            <div className={`container-fluid container-sm col-12 col-md-6 col-lg-4 d-flex d-md-block justify-content-center ${styles.top}`} style={{
                 display: "inline-block",
                 padding: "15px",
                 margin: "0"
             }}>
-                <div className={styles.rate}>
-                    <div className='mx-3'>
+                <div className={`${styles.rate} py-4 py-lg-5`}>
+                    <div className='mx-3 py-0 py-md-3'>
 
                         <div className={styles.header}>
                             <div className={styles.header_title}>
@@ -24,20 +25,8 @@ export default class Rate extends React.Component {
                         <div className={styles.body}>
                             {this.props.desc.map(item =>
                                 <div className={styles.body_item}>
-
-                                    <svg opacity="0.4"
-                                         width="1.4em"
-                                         height="1.4em"
-                                         viewBox="0 0 16 16"
-                                         className="bi bi-check"
-                                         fill="red"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path fillRule="evenodd"
-                                              d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                                    </svg>
-
+                                    <img src={checkSvg} className="bi bi-check"/>
                                     {item}
-
                                 </div>
                             )}
                         </div>
