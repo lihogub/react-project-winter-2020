@@ -25,7 +25,7 @@ export default class Rate extends React.Component {
                                 item =>
                                     (
                                         <div className={styles.body_item}>
-                                            <img src={checkSvg} className="bi bi-check"/>
+                                            <img src={checkSvg} className="bi bi-check" alt="check mark"/>
                                             {item}
                                         </div>
                                     )
