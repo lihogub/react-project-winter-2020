@@ -66,6 +66,7 @@
 .arrow {
     height: 90px;
     padding: 30px;
+    opacity: 0.5;
 }
 
 .arrowRight {
@@ -87,7 +88,7 @@
 
 .totalSlides {
     font-size: 30px;
-    color: gray;
+    color: lightgray;
     font-weight: 300;
 }
 

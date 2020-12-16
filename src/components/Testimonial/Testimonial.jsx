@@ -38,6 +38,7 @@ export default class Testimonial extends React.Component {
         infinite: true,
         fade: true,
         speed: 1000,
+        adaptiveHeight: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         beforeChange: (current, next) => this.setState({currentSlide: next}),
@@ -54,7 +55,7 @@ export default class Testimonial extends React.Component {
 
     render() {
         const slides = this.state.slides.length && this.state.slides.map(
-            (item) => <TestimonialItem id={item.id} link={item.link} text={item.text} sign={item.sign}/>)
+            (item) => <TestimonialItem key={item.id} id={item.id} link={item.link} text={item.text} sign={item.sign}/>)
 
         return (
             <div className={`container-fluid container-sm px-0 px-md-5 mb-5 pb-5 ${!this.state.slides.length && "d-none"}`}>
