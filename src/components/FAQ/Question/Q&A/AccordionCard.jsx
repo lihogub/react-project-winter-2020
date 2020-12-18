@@ -19,14 +19,14 @@ function CustomHeader({children, eventKey, callback}) {
             type="button"
             style={
                 {
-                    color: isCurrentEventKey ? 'red' : 'black',
+                    color: isCurrentEventKey ? '#F14C36' : 'black',
                     fontWeight: "bold",
                     backgroundColor: "transparent",
                     borderLeft: isCurrentEventKey ? '3px solid #F14C36' : '3px solid transparent',
                     borderRight: isCurrentEventKey ? '3px solid #F14C36' : '3px solid transparent',
                     borderTop: isCurrentEventKey ? '3px solid #F14C36' : '3px solid transparent',
-                    borderBottom: 'transparent',
-                    padding: '10px 20px'
+                    borderBottom: 'none',
+                    padding: '10px 20px',
                 }
             }
             onClick={decoratedOnClick}
@@ -42,7 +42,8 @@ export default class AccordionCard extends React.Component {
             <Card className={styles.globalCard}>
                 <CustomHeader eventKey={this.props.keyy}>
                     <h5 className={styles.question}>
-                        {this.props.keyy}.  {this.props.question}
+                        <span style={{color: "black", fontSize: 12, opacity: 0.5}}>{this.props.keyy}. </span>
+                        {this.props.question}
                     </h5>
                 </CustomHeader>
                 <Accordion.Collapse eventKey={this.props.keyy}>

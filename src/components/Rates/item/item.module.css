@@ -1,14 +1,8 @@
 .rate{
-    padding-left: 20px;
-    padding-right: 20px;
-
     max-width: 500px;
-
     border-radius: 5px;
     border: 1px solid #e6e6e6;
-
     background: #ffffff;
-
     transition: all 500ms;
     transform-origin: center;
 }
@@ -37,7 +31,6 @@
 }
 
 .body_item{
-    width: 300px;
     max-width: 110%;
     margin-bottom: 18px;
     line-height: 1.2;
@@ -72,7 +65,7 @@
     z-index: 2;
 }
 
-@media screen and (min-width: 800px) and (orientation: landscape) {
+@media (min-width: 768px) {
     .rate:hover{
         box-shadow: 0 0 30px 30px rgba(5,12,51,.05);
         transform: scale(1.1);
