@@ -1,12 +1,22 @@
-.globalContainer {
+.outsideContainer {
     border-radius: 0;
-    padding: 10px 12px 10px 30px;
-    border: 3px solid transparent;
+    border: 0px;
     transition: border-color .35s;
     margin-bottom: 5vw;
     background: transparent;
+
 }
 
+@media (min-width: 480px) {
+    .outsideContainer {
+        padding: 0 14vw;
+    }
+}
+@media (min-width: 576px) {
+    .outsideContainer {
+        padding: 0 16vw;
+    }
+}
 .mainTitle {
     margin-bottom: 5vw;
     font-weight: bold;

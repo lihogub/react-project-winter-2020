@@ -1,9 +1,6 @@
 .globalCard {
     border: 3px solid transparent;
-}
-
-.customCardHeader {
-    padding-bottom: 5px;
+    padding: 0px;
 }
 
 .cardBody {
@@ -14,5 +11,5 @@
 }
 
 .question {
-    font-weight: bold;
+    font-weight: 600;
 }
