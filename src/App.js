@@ -10,6 +10,7 @@ import Footer from "./components/Foottter/Footer";
 import FAQ from "./components/FAQ/FAQ";
 import Rates from "./components/Rates/Rates";
 import Testimonial from "./components/Testimonial/Testimonial";
+import Form from "./components/OurForm/OurForm";
 
 export default class App extends React.Component {
 
@@ -31,6 +32,7 @@ export default class App extends React.Component {
                     <Testimonial/>
                     <FAQ/>
                 </div>
+                <Form/>
                 <Footer/>
             </Container>
         )
