@@ -1,0 +1,24 @@
+.titleStyle {
+    font-weight: 700;
+    font-size: 24px;
+    padding: 15px;
+}
+
+.textStyle {
+    opacity: 0.75;
+    width: 750px;
+    max-width: 95%;
+    margin: 0 auto 0 0;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .titleStyle {
+        font-size: 44px;
+        padding-bottom: 5px;
+    }
+
+    .textStyle {
+        margin: 0 auto;
+    }
+}
