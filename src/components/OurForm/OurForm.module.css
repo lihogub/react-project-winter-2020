@@ -3,16 +3,32 @@
     background: linear-gradient(90deg, rgba(4,6,19,1) 0%, rgba(26,27,39,1) 100%);
 }
 
+
+
+
+
 .button{
     height: 54px;
-    color: #F14D34;
-    border: #F14D34 1px solid;
+    border: #F14D34 2px solid;
+    background-color: #F14D34;
+    color: white;
     font-size: 13px;
 }
 
-.button:active {
-    background-color: #F14D34 !important;
+.button:hover {
+    background-color: transparent;
+    border: #F14D34 2px solid;
 }
+
+.button:active {
+    background-color: transparent !important;
+    border: #F14D34 2px solid !important;
+}
+
+
+
+
+
 
 .title{
     font-weight: bold;
@@ -30,17 +46,142 @@
 
 .description {
     line-height: 1.55;
-    margin-bottom: 140px;
+    margin-bottom: 30px;
     font-weight: 500;
     font-size: 14px;
     color: rgba(256,256,256,.7);
 }
+
+
+
+
+
+
+.telephone{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: white;
+    padding-left: 40px;
+}
+
+.mailto{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: white;
+    padding-left: 40px;
+}
+
+@media screen and (min-width: 780px) {
+    .description {
+        margin-bottom: 140px;
+    }
+    .telephone{
+        font-size: 32px;
+    }
+    .mailto{
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+.captchaPlug{
+    height: 74px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.tel::before{
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: url("../../res/images/telephone.svg") no-repeat center;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.mail::before{
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: url("../../res/images/envelope.svg") no-repeat center;
+    position: absolute;
+    opacity: 0.8;
+}
+
+
+
+
+
+
+.checkBox{
+    margin-bottom: 10px;
+}
+
+.text{
+    color: white;
+}
+
+.link{
+    color: #F14D34 !important;
+}
+
+
+
+
+
 
 .form{
     width: 480px;
     max-width: 100%;
     margin-left: auto;
 }
+
+.formFieldWrap{
+    margin: 0;
+    padding: 0 0 7px;
+}
+
+.formField::placeholder {
+    color: white;
+}
+
+.formField{
+    color: white;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 14px;
+    border: 1px solid rgba(256,256,256,.3);
+    background: transparent;
+    border-radius: 5px;
+    padding: 26px 24px;
+}
+
+.formField:focus {
+    color: white;
+    background: transparent;
+}
+
+.formField:hover {
+    background: transparent;
+}
+
+.formField:active {
+    background: transparent;
+}
+
+
+
+
 
 /* xs */
 .bgImg {

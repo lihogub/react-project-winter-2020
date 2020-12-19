@@ -1,30 +1,9 @@
 import React from "react";
 import styles from "./OurForm.module.css";
 import {Button, Form} from "react-bootstrap";
+import captchaPlug from "../../res/images/recaptcha.png";
 
 export default class Competency extends React.Component {
-
-    textBlockWrapper = {
-
-    }
-
-    textBlockContact = {
-
-    }
-
-    telephone = {
-        fontWeight: "bold",
-        fontSize: "36px",
-        marginBottom: "12px",
-        color: "white"
-    }
-
-    mail = {
-        fontWeight: "bold",
-        fontSize: "18px",
-        marginBottom: "12px",
-        color: "white"
-    }
 
     render() {
 
@@ -35,7 +14,7 @@ export default class Competency extends React.Component {
                         <div className='row'>
 
                             <div className='col-md-6 col-xs-12 col-sm-6'>
-                                <div style={this.textBlockWrapper}>
+                                <div>
 
                                     <div className={styles.title}>
                                         Оставить заявку на <br/>
@@ -49,16 +28,12 @@ export default class Competency extends React.Component {
                                         eu tellus in, semper rhoncus neque. Maecenas.
                                     </div>
 
-                                    <div className={this.textBlockContact}>
-                                        <div>
-                                            <div>
-                                                <a style={this.telephone}
-                                                    href='tel:88005553535'>8 800 555-35-35</a>
-                                            </div>
-                                            <div>
-                                                <a style={this.mail}
-                                                    href='mailto:twopeakmusic@gmail.com'>twopeakmusic@gmail.com</a>
-                                            </div>
+                                    <div>
+                                        <div className={styles.tel}>
+                                            <a className={styles.telephone} href='tel:88005553535'>8 800 555-35-35</a>
+                                        </div>
+                                        <div className={styles.mail}>
+                                            <a className={styles.mailto} href='mailto:twopeakmusic@gmail.com'>twopeakmusic@gmail.com</a>
                                         </div>
                                     </div>
 
@@ -67,29 +42,38 @@ export default class Competency extends React.Component {
 
                             <div className='col-md-6 col-xs-12 col-sm-6'>
                                 <Form className={styles.form}>
-                                    <Form.Group controlId="exampleForm.nameInput">
-                                        <Form.Control type="text" placeholder="Ваше имя" />
+
+                                    <Form.Group controlId="exampleForm.nameInput" className={styles.formFieldWrap}>
+                                        <Form.Control type="text" placeholder="Ваше имя" className={styles.formField}/>
                                     </Form.Group>
 
-                                    <Form.Group controlId="exampleForm.phoneInput">
-                                        <Form.Control type="phone" placeholder="Телефон" />
+                                    <Form.Group controlId="exampleForm.phoneInput" className={styles.formFieldWrap}>
+                                        <Form.Control type="phone" placeholder="Телефон" className={styles.formField}/>
                                     </Form.Group>
 
-                                    <Form.Group controlId="exampleForm.emailInput">
-                                        <Form.Control type="email" placeholder="E-mail" />
+                                    <Form.Group controlId="exampleForm.emailInput" className={styles.formFieldWrap}>
+                                        <Form.Control type="email" placeholder="E-mail" className={styles.formField}/>
                                     </Form.Group>
 
-                                    <Form.Group controlId="exampleForm.commentInput">
-                                        <Form.Control as="textarea" rows={7} placeholder="Комментарий"/>
+                                    <Form.Group controlId="exampleForm.commentInput" className={styles.formFieldWrap}>
+                                        <Form.Control as="textarea" rows={7} placeholder="Комментарий" className={styles.formField}/>
                                     </Form.Group>
 
-                                    <Form.Group>
+                                    <Form.Group className={`${styles.checkBox}`}>
                                         <Form.Check
                                             required
-                                            label="Agree to terms and conditions"
+                                            label=""
                                             feedback="You must agree before submitting."
                                         />
+
+                                        <div className={`${styles.text}`}>
+                                            Отправляя заявку, я даю согласие на
+                                        </div>
+                                        <a className={`${styles.link}`}> обработку своих персональных данных</a>
+
                                     </Form.Group>
+
+                                    <img alt='captcha-plug' src={captchaPlug} className={styles.captchaPlug}/>
 
                                     <button
                                         type="submit"
