@@ -1,52 +1,111 @@
 .footerGlobal {
     overflow: hidden;
-    background-color: black;
+    background: rgb(4, 6, 19);
+    background: linear-gradient(90deg, rgba(4, 6, 19, 1) 0%, rgba(26, 27, 39, 1) 100%);
 }
 
 /* xs */
 .bgImg {
     background-repeat: no-repeat;
     background-image: url(../../res/images/new-dr-coder-bg.svg);
-    background-position: 105% 140%;
+    background-position: 105% 90%;
     background-size: auto 25vw;
 
-    padding-bottom: 3vw;
+    padding-bottom: 7vw;
     padding-top: 3vw;
 }
 
-/* sm 450+ */
+/* sm 400+ */
 @media (min-width: 400px) {
     .bgImg {
-        background-position: 103% 180%;
+        background-position: 103% 100%;
 
         background-size: auto 24vw;
+    }
+}
+
+/* sm 480+ */
+@media (min-width: 480px) {
+    .bgImg {
+        background-position: 103% 150%;
+
+        background-size: auto 22vw;
+    }
+
+    .footerGlobal {
+        padding-bottom: 5vw;
     }
 }
 
 /* sm 570+ */
 @media (min-width: 570px) {
     .bgImg {
-        background-position: 103% -180%;
+        background-position: 103% 200%;
 
         background-size: auto 22vw;
     }
+
+    .footerGlobal {
+        padding-bottom: 5vw;
+    }
 }
 
-/* sm-md 780+ */
-@media (min-width: 780px) {
+/* sm-md 670+ */
+@media (min-width: 670px) {
     .bgImg {
-        background-position: 103% -85%;
+        background-position: 103% 250%;
+
+        background-size: auto 22vw;
+    }
+
+    .footerGlobal {
+        padding-bottom: 5vw;
+    }
+}
+
+/* sm-md 767+ */
+@media (min-width: 767px) {
+    .bgImg {
+        background-position: 103% -30%;
 
         background-size: auto 20vw;
+        padding-bottom: 0;
+    }
+
+    .footerGlobal {
+        padding-bottom: 0;
+    }
+}
+
+/* md 892+ */
+@media (min-width: 892px) {
+    .bgImg {
+        background-position: 103% 310%;
+
+        background-size: auto 20vw;
+        padding-bottom: 0;
+    }
+
+    .footerGlobal {
+        padding-bottom: 0;
     }
 }
 
 /* md 992+ */
 @media (min-width: 992px) {
     .bgImg {
-        background-position: 103% -110%;
+        background-position: 103% -30%;
 
         background-size: auto 20vw;
+        padding-bottom: 0;
+    }
+
+    .footerGlobal {
+        padding-bottom: 0;
+    }
+
+    .socialNetwork {
+        margin-right: 10px;
     }
 }
 
@@ -55,7 +114,16 @@
     .bgImg {
         background-position: 103% -40%;
 
-        background-size: auto 20vw;
+        background-size: auto 17vw;
+        padding-bottom: 2vw;
+    }
+
+    .footerGlobal {
+        padding-bottom: 0;
+    }
+
+    .socialNetwork {
+        margin-right: 5px;
     }
 }
 
@@ -65,7 +133,7 @@
 }
 
 .socialNetwork {
-    margin-right: 1vw;
+    margin-right: 3vw;
     margin-bottom: 1vw;
 }
 

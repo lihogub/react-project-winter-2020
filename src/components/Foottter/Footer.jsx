@@ -26,10 +26,10 @@ export default class Footer extends React.Component {
                                         src="https://i.pinimg.com/originals/1c/39/c8/1c39c81fccba10c48869ce903c533845.png"
                                         alt="telegram"/>
                                 </a>
-                                <a href="https://facebook.com" className={styles.socialNetwork}>
+                                <a href="https://youtube.com" className={styles.socialNetwork}>
                                     <img
                                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/YouTube_social_dark_squircle_%282017%29.svg/1024px-YouTube_social_dark_squircle_%282017%29.svg.png"
-                                        alt="facebook"/>
+                                        alt="youtube"/>
                                 </a>
                             </div>
                             <div>

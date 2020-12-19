@@ -1,0 +1,41 @@
+.caseStyle {
+    text-decoration: none;
+    transition: .5s;
+}
+.caseStyle:hover {
+    text-decoration: none;
+    transform: scale(1.02);
+}
+
+
+.titleStyle {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.descStyle {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.8;
+    color: black;
+}
+
+.imgSize {
+    width: 100%;
+    height: 135px;
+}
+
+@media (min-width: 768px) {
+
+    .titleStyle {
+        font-size: 18px;
+    }
+
+    .descStyle {
+        font-size: 14px;
+    }
+
+    .imgSize {
+        height: 180px;
+    }
+}
