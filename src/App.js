@@ -11,6 +11,7 @@ import FAQ from "./components/FAQ/FAQ";
 import Rates from "./components/Rates/Rates";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Form from "./components/OurForm/OurForm";
+import Partner from "./components/Partner/Partner"
 
 export default class App extends React.Component {
 
@@ -30,6 +31,7 @@ export default class App extends React.Component {
                     <Execution/>
                     <Workers/>
                     <Testimonial/>
+                    <Partner/>
                     <FAQ/>
                 </div>
                 <Form/>

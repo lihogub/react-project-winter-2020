@@ -1,9 +1,6 @@
 .globalCard {
     border: 3px solid transparent;
-}
-
-.customCardHeader {
-    padding-bottom: 5px;
+    padding: 0;
 }
 
 .cardBody {
@@ -11,8 +8,17 @@
     border-right: 3px solid #F14C36;
     border-bottom: 3px solid #F14C36;
     padding-top: 5px;
+    font-weight: 500;
+    opacity: 0.75;
 }
 
 .question {
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (min-width: 576px) {
+    .outsideContainer {
+        padding: 0 16vw;
+    }
 }
