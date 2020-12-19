@@ -44,6 +44,8 @@
     color: #F14D34;
     border: #F14D34 1px solid;
     font-size: 13px;
+    box-shadow: none !important;
+    transition: .5s;
 }
 
 .footer_button:active {
@@ -54,7 +56,6 @@
     color: white;
     background-color: #F14D34 !important;
 }
-
 
 .top{
     z-index: 1;
