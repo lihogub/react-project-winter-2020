@@ -1,6 +1,7 @@
 import React from "react";
 import CaseItem from "./Item/CaseItem";
 import styles from "./Case.module.css"
+import {Link} from "react-router-dom";
 
 export default class Case extends React.Component {
 
@@ -10,8 +11,8 @@ export default class Case extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <h5 className={`text-center pt-5 pb-2 py-md-5 ${styles.titleStyle}`}>
+            <div className="container py-3">
+                <h5 className={`text-center pt-5 pt-md-3 pb-2 py-md-5 ${styles.titleStyle}`}>
                     Последние кейсы
                 </h5>
                 <div className="row">
@@ -56,7 +57,7 @@ export default class Case extends React.Component {
                             imgUrl={this.getImgUrl(4)}
                             title={"Обмен товарами и заказами интернет-магазинов на Drupal 7 с 1С: Предприятие, Мойсклад, Класс365"}
                             isFilled={false}
-                            desc={<p>Опубликован <a href="module">релиз модуля...</a></p>}
+                            desc={<p>Опубликован <Link to="module">релиз модуля...</Link></p>}
                             date={"22.08.2019"}
                             link={"article-5"}
                         />

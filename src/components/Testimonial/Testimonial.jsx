@@ -58,8 +58,8 @@ export default class Testimonial extends React.Component {
             (item) => <TestimonialItem key={item.id} id={item.id} link={item.link} text={item.text} sign={item.sign}/>)
 
         return (
-            <div className={`container-fluid container-sm px-0 px-md-5 mb-5 pb-5`}>
-                <h1 className={`${styles.testimonialTitle} text-center mb-4 mb-md-5`}>
+            <div className={`container-fluid container-sm px-0 px-md-5 mb-5 pb-5 pt-0 pt-md-3`}>
+                <h1 className={`${styles.testimonialTitle} text-center mb-4 mb-md-5 pt-0 pt-md-5`}>
                     Отзывы
                 </h1>
                 <div className={`mx-0 mx-md-5 ${styles.testimonial}`}>
