@@ -12,6 +12,8 @@ import Rates from "./components/Rates/Rates";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Partner from "./components/Partner/Partner"
 import Case from "./components/Case/Case";
+import Expertise from "./components/Expertise/Expertise";
+
 
 export default class App extends React.Component {
 
@@ -27,6 +29,7 @@ export default class App extends React.Component {
                 <div style={this.style} className="px-3">
                     <Competency/>
                     <Advantage/>
+                    <Expertise/>
                     <Rates/>
                     <Execution/>
                     <Workers/>

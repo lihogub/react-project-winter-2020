@@ -68,7 +68,7 @@ export default class Rates extends React.Component {
         <div className='container' style={this.componentStyle}>
             <div className='row'>
                 <div className='col-md-12'>
-                    <h2 className={styles.title}>
+                    <h2 className={`pt-md-5 pb-md-5 ${styles.title}`}>
                         Тарифы
                     </h2>
                 </div>
