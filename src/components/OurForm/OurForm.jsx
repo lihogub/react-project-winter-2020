@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./OurForm.module.css";
-import {Button, Form} from "react-bootstrap";
+import {Form} from "react-bootstrap";
 import captchaPlug from "../../res/images/recaptcha.png";
-import checkboxBorder from "../../res/images/app.svg";
 
 export default class Competency extends React.Component {
 

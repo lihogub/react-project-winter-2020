@@ -10,7 +10,6 @@ import Footer from "./components/Foottter/Footer";
 import FAQ from "./components/FAQ/FAQ";
 import Rates from "./components/Rates/Rates";
 import Testimonial from "./components/Testimonial/Testimonial";
-import Form from "./components/OurForm/OurForm";
 import Partner from "./components/Partner/Partner"
 import Case from "./components/Case/Case";
 
