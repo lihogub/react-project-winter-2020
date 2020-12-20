@@ -36,7 +36,6 @@ export default class App extends React.Component {
                     <Partner/>
                     <FAQ/>
                 </div>
-                <Form/>
                 <Footer/>
             </Container>
         )

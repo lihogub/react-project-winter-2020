@@ -1,6 +1,8 @@
 .globalStyle{
     background: rgb(4,6,19);
     background: linear-gradient(90deg, rgba(4,6,19,1) 0%, rgba(26,27,39,1) 100%);
+
+    border-bottom: #333333 2px solid;
 }
 
 
@@ -34,6 +36,7 @@
     font-weight: bold;
     line-height: 1.215;
     margin-bottom: 20px;
+    text-align: center;
     font-size: 24px;
     color: white;
 }
@@ -52,6 +55,11 @@
     color: rgba(256,256,256,.7);
 }
 
+@media (max-width: 600px){
+    .description {
+        text-align: justify;
+    }
+}
 
 
 
@@ -60,7 +68,6 @@
 .telephone{
     font-weight: bold;
     font-size: 24px;
-    margin-bottom: 12px;
     color: white;
     padding-left: 40px;
 }
@@ -69,9 +76,9 @@
     text-decoration: underline;
     font-weight: bold;
     font-size: 14px;
-    margin-bottom: 12px;
     color: white;
     padding-left: 40px;
+
 }
 
 @media screen and (min-width: 780px) {
@@ -96,38 +103,74 @@
     margin-bottom: 10px;
 }
 
-
-
-
+.mail, .tel{
+    height: 36px;
+    line-height: 36px;
+}
 
 .tel::before{
     content: "";
-    width: 18px;
-    height: 18px;
-    background: url("../../res/images/telephone.svg") no-repeat center;
+    width: 16px;
+    height: 16px;
+    background: url("../../res/images/telephone.svg") no-repeat;
     position: absolute;
+
+    margin-top: 9px;
+    margin-left: 9px;
+
     opacity: 0.8;
 }
 
 .mail::before{
     content: "";
-    width: 18px;
-    height: 18px;
-    background: url("../../res/images/envelope.svg") no-repeat center;
+    width: 16px;
+    height: 16px;
+    background: url("../../res/images/envelope.svg") no-repeat;
     position: absolute;
+
+    margin-top: 9px;
+    margin-left: 9px;
+
     opacity: 0.8;
 }
 
+.contacts{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 12px;
+}
 
 
+.checkboxBorder{
+    position: absolute;
+    left: 72px;
+    bottom: 0;
+    height: 32px;
+    weight: 32px;
+}
 
+.checkBoxCheck input[type="checkbox"]{
+    position: absolute;
+    left: 27px;
+    bottom: 34px;
+    opacity: 1;
+    transform: scale(2.2);
+}
 
+.checkBoxCheck{
+    position: absolute;
+}
 
 .checkBox{
     margin-bottom: 10px;
 }
 
 .text{
+    text-align: justify;
+    margin-left: 36px;
+    font-weight: normal;
+    line-height: 1.35;
+    font-size: 9pt;
     color: white;
 }
 
@@ -138,12 +181,14 @@
 
 
 
+.block{
 
+}
 
 .form{
     width: 480px;
     max-width: 100%;
-    margin-left: auto;
+    margin-left: 0;
 }
 
 .formFieldWrap{
@@ -183,59 +228,44 @@
 
 
 
-/* xs */
 .bgImg {
+    padding-top: 35px;
+    padding-bottom: 35px;
 
     background-repeat: no-repeat;
     background-image: url(../../res/images/new-dr-coder-bg.svg);
-    background-position: 0vw 0vw;
-    background-size: auto 25vw;
 
-    padding-bottom: 3vw;
-    padding-top: 3vw;
+    background-position-x: center;
+    background-size: 182px;
 }
 
-/* sm 450+ */
-@media (min-width: 400px) {
+@media (min-width: 576px) {
     .bgImg {
-        background-position: 103% 180%;
-
-        background-size: auto 24vw;
+        background-size: 255px;
     }
+
+    .mail, .tel{
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .mail::before{
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    .tel::before{
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    .title {
+        text-align: left;
+    }
+
+    .form{
+        margin-left: auto;
+    }
+
 }
 
-/* sm 570+ */
-@media (min-width: 570px) {
-    .bgImg {
-        background-position: 103% -180%;
-
-        background-size: auto 22vw;
-    }
-}
-
-/* sm-md 780+ */
-@media (min-width: 780px) {
-    .bgImg {
-        background-position: 103% -85%;
-
-        background-size: auto 20vw;
-    }
-}
-
-/* md 992+ */
-@media (min-width: 992px) {
-    .bgImg {
-        background-position: 103% -110%;
-
-        background-size: auto 20vw;
-    }
-}
-
-/* lg 1200+ */
-@media (min-width: 1200px) {
-    .bgImg {
-        background-position: 103% -40%;
-
-        background-size: auto 20vw;
-    }
-}

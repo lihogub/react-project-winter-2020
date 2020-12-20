@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./OurForm.module.css";
 import {Button, Form} from "react-bootstrap";
 import captchaPlug from "../../res/images/recaptcha.png";
+import checkboxBorder from "../../res/images/app.svg";
 
 export default class Competency extends React.Component {
 
@@ -13,35 +14,31 @@ export default class Competency extends React.Component {
                     <div className='container'>
                         <div className='row'>
 
-                            <div className='col-md-6 col-xs-12 col-sm-6'>
-                                <div>
-
-                                    <div className={styles.title}>
-                                        Оставить заявку на <br/>
-                                        поддержку сайта
-                                    </div>
-
-                                    <div className={styles.description}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
-                                        Suspendisse justo justo, finibus a dolor sit amet, <br/>
-                                        pharetra condimentum neque. Pellentesque mi nisi, fringilla <br/>
-                                        eu tellus in, semper rhoncus neque. Maecenas.
-                                    </div>
-
-                                    <div>
-                                        <div className={styles.tel}>
-                                            <a className={styles.telephone} href='tel:88005553535'>8 800 555-35-35</a>
-                                        </div>
-                                        <div className={styles.mail}>
-                                            <a className={styles.mailto} href='mailto:twopeakmusic@gmail.com'>twopeakmusic@gmail.com</a>
-                                        </div>
-                                    </div>
-
+                            <div className={`col-xs-12 col-sm-6 ${styles.block}`}>
+                                <div className={styles.title}>
+                                    Оставить заявку на <br/>
+                                    поддержку сайта
                                 </div>
+
+                                <div className={styles.description}>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+                                    Suspendisse justo justo, finibus a dolor sit amet, <br/>
+                                    pharetra condimentum neque. Pellentesque mi nisi, fringilla <br/>
+                                    eu tellus in, semper rhoncus neque. Maecenas.
+                                </div>
+
+                                <ul className={styles.contacts}>
+                                    <li className={styles.tel}>
+                                        <a className={styles.telephone} href='tel:88005553535'>8 800 555-35-35</a>
+                                    </li>
+                                    <li className={styles.mail}>
+                                        <a className={styles.mailto} href='mailto:twopeakmusic@gmail.com'>twopeakmusic@gmail.com</a>
+                                    </li>
+                                </ul>
                             </div>
 
-                            <div className='col-md-6 col-xs-12 col-sm-6'>
-                                <Form className={styles.form}>
+                            <div className={`col-xs-12 col-sm-6 ${styles.block}`}>
+                                <Form className={`${styles.form}`}>
 
                                     <Form.Group controlId="exampleForm.nameInput" className={styles.formFieldWrap}>
                                         <Form.Control type="text" placeholder="Ваше имя" className={styles.formField}/>
@@ -60,16 +57,23 @@ export default class Competency extends React.Component {
                                     </Form.Group>
 
                                     <Form.Group className={`${styles.checkBox}`}>
+
+                                        <div className={`${styles.text}`}>
+                                            Отправляя заявку, я даю согласие на
+                                            <a href="/" className={`${styles.link}`}> обработку своих персональных данных</a>
+                                            .
+                                        </div>
+
+
                                         <Form.Check
+                                            className={styles.checkBoxCheck}
                                             required
+                                            type='checkbox'
                                             label=""
                                             feedback="You must agree before submitting."
                                         />
 
-                                        <div className={`${styles.text}`}>
-                                            Отправляя заявку, я даю согласие на
-                                        </div>
-                                        <a className={`${styles.link}`}> обработку своих персональных данных</a>
+                                        {/*<img src={checkboxBorder} className={styles.checkboxBorder}/>*/}
 
                                     </Form.Group>
 

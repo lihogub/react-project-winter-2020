@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css"
+import Form from "../OurForm/OurForm";
 
 export default class Footer extends React.Component {
 
@@ -7,6 +8,7 @@ export default class Footer extends React.Component {
     render() {
         return (
             <footer>
+                <Form/>
                 <div className={styles.footerGlobal}>
                     <div className={styles.bgImg}>
                         <div className="container">
