@@ -92,9 +92,6 @@ export default class Competency extends React.Component {
                                                 label=""
                                                 feedback="You must agree before submitting."
                                             />
-                                            <div className={styles.tick}>
-
-                                            </div>
 
                                         </Form.Group>
 
