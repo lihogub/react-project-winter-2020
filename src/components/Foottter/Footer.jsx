@@ -8,8 +8,8 @@ export default class Footer extends React.Component {
     render() {
         return (
             <footer>
-                <Form/>
                 <div className={styles.footerGlobal}>
+                <Form/>
                     <div className={styles.bgImg}>
                         <div className="container">
                             <div className={styles.links}>
