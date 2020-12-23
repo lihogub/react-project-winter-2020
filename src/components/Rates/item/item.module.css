@@ -7,6 +7,22 @@
     transform-origin: center;
 }
 
+.rateIsBig{
+    max-width: 500px;
+    border-radius: 5px;
+    border: 1px solid #e6e6e6;
+    background: #ffffff;
+    transition: all 500ms;
+    transform-origin: center;
+    box-shadow: 0 0 30px 30px rgba(5,12,51,.05);
+    transform: scale(1.1);
+}
+
+.rateIsBig .footer_button {
+    background-color: #F14D34 !important;
+    color: white;
+}
+
 .wrapper{
     margin: 0 auto;
     position: relative;
@@ -71,5 +87,4 @@
         box-shadow: 0 0 30px 30px rgba(5,12,51,.05);
         transform: scale(1.1);
     }
-
 }
