@@ -6,7 +6,10 @@
 }
 
 
-
+*::before, *::after {
+    content: "";
+    display: inherit;
+}
 
 
 .button{

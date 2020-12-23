@@ -1,6 +1,7 @@
 .globalCard {
     border: 3px solid transparent;
     padding: 0;
+    background-color: white;
 }
 
 .cardBody {
