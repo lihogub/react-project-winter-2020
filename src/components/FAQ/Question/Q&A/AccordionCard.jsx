@@ -21,13 +21,12 @@ function CustomHeader({children, eventKey, callback}) {
                 {
                     color: isCurrentEventKey ? '#F14C36' : 'black',
                     fontWeight: "bold",
-                    backgroundColor: "white !important",
+                    backgroundColor: "white",
                     borderLeft: isCurrentEventKey ? '3px solid #F14C36' : '3px solid transparent',
                     borderRight: isCurrentEventKey ? '3px solid #F14C36' : '3px solid transparent',
                     borderTop: isCurrentEventKey ? '3px solid #F14C36' : '3px solid transparent',
                     borderBottom: 'none',
                     padding: '10px 20px',
-
                 }
             }
             onClick={decoratedOnClick}
