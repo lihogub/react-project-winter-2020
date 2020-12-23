@@ -4,14 +4,15 @@ import styles from "./item.module.css";
 
 export default class Rate extends React.Component {
 
-
     render() {
+
         return (
+
             <div className={`container-fluid container-sm px-0 py-3 col-12 col-md-6 col-lg-4 d-flex d-md-block justify-content-center ${styles.top}`} style={{
                 display: "inline-block",
                 margin: "0"
             }}>
-                <div className={`${styles.rate} py-4 py-lg-5 mx-0 mx-md-3 px-4 py-0 py-md-3`}>
+                <div className={`${this.props.isBig ? styles.rateIsBig : styles.rate} py-4 py-lg-5 mx-0 mx-md-3 px-4 py-0 py-md-3`}>
 
                     <div className={styles.header}>
                         <div className={styles.header_title}>
@@ -44,6 +45,7 @@ export default class Rate extends React.Component {
                 </div>
             </div>
         )
+
     }
 
 }

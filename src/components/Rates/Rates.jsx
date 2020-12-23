@@ -54,8 +54,9 @@ export default class Rates extends React.Component {
 
     render() {
         const rates = this.state.rateData.map(
-            (item) => (
+            (item, index) => (
                 <Rate
+                    isBig={index === 1}
                     key={item.id}
                     title={item.title}
                     desc={item.features}

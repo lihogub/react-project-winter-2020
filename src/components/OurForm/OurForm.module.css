@@ -41,9 +41,10 @@
     color: white;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 767px) {
     .title {
         font-size: 42px;
+        text-align: left;
     }
 }
 
@@ -330,8 +331,8 @@
     }
 
     .mail, .tel{
-        height: 50px;
-        line-height: 50px;
+        height: 40px;
+        line-height: 40px;
     }
 
     .mail::before{
@@ -342,10 +343,6 @@
     .tel::before{
         margin-top: 15px;
         margin-left: 15px;
-    }
-
-    .title {
-        text-align: left;
     }
 
     .form{

@@ -24,7 +24,7 @@ export default class Competency extends React.Component {
                     <div className='container p-0'>
                         <div className={`row`}>
 
-                            <div className={`col-md-6 col-xs-12 col-sm-6`}>
+                            <div className={`col-md-6 col-12`}>
 
                                 <div className={`${styles.textWrapper}`}>
 
@@ -53,7 +53,7 @@ export default class Competency extends React.Component {
 
                             </div>
 
-                            <div className={`col-md-6 col-xs-12 col-sm-6`}>
+                            <div className={`col-md-6 col-12`}>
 
                                 <div className={`${styles.formWrapper}`}>
 
