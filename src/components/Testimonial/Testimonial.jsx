@@ -70,7 +70,9 @@ export default class Testimonial extends React.Component {
                         </div>
                         <div className="col-12 col-xl-4 px-0 d-flex align-items-center justify-content-center">
                             <div className="container-fluid row justify-content-center">
-                                <div className="col-auto row d-flex justify-content-center" onClick={(event) => {
+                                <div className="col-auto row d-flex justify-content-center"
+                                     style={{cursor: "pointer"}}
+                                     onClick={(event) => {
                                     event.preventDefault();
                                     this.slider.slickPrev();
                                 }}>
@@ -90,7 +92,8 @@ export default class Testimonial extends React.Component {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="col-auto row d-flex justify-content-center" onClick={(event) => {
+                                <div className="col-auto row d-flex justify-content-center" style={{cursor: "pointer"}}
+                                     onClick={(event) => {
                                     event.preventDefault();
                                     this.slider.slickNext();
                                 }}>
