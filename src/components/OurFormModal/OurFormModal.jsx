@@ -51,7 +51,7 @@ class OurFormModal extends React.Component {
                     aria-labelledby="contained-modal-title-vcenter"
                     centered
                 >
-                    <Modal.Header>
+                    <Modal.Header closeButton closeLabel='kek'>
                         <h2 className={styles.title}>
                             Оставить заявку <br/>
                             на поддержку сайта
@@ -84,7 +84,7 @@ class OurFormModal extends React.Component {
                             </Form.Group>
 
                             <Form.Group controlId="exampleForm.commentInput" className={styles.formFieldWrap}>
-                                <Form.Control as="textarea" rows={5} placeholder="Комментарий" className={styles.formField}
+                                <Form.Control as="textarea" rows={3} placeholder="Комментарий" className={styles.formField}
                                               value={this.props.form.comment}
                                               onChange={(e) => this.props.setFormComment(e.target.value)}
                                 />

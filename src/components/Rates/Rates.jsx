@@ -27,7 +27,7 @@ export default class Rates extends React.Component {
 
     componentStyle = {
         maxWidth: "1170px",
-        paddingTop: "118px",
+        paddingTop: "108px",
     }
 
     ratesStyle = {
@@ -67,30 +67,32 @@ export default class Rates extends React.Component {
         )
 
         return (
-        <div id="rates" className='container' style={this.componentStyle} onMouseLeave={() => this.setState({activeRate: 1})}>
-            <div className='row'>
-                <div className='col-md-12'>
-                    <h2 className={`pt-md-5 pb-md-5 ${styles.title}`}>
-                        Тарифы
-                    </h2>
+            <div className={styles.backgroundImg}>
+                <div id="rates" className={`container`} style={this.componentStyle} onMouseLeave={() => this.setState({activeRate: 1})}>
+                    <div className='row'>
+                        <div className='col-md-12'>
+                            <h2 className={`pt-md-5 pb-md-5 ${styles.title}`}>
+                                Тарифы
+                            </h2>
+                        </div>
+                    </div>
+                    <div className='row d-flex flex-row justify-content-evenly mx-3' style={this.ratesStyle}>
+                        {rates}
+                    </div>
+                    <div className="container" style={this.additionalContainerStyle}>
+                        <div className='text-center' style={this.additionalTextStyle}>
+                            Вам не подходят наши тарифы?
+                            Оставьте заявку и мы предложим вам индивидуальные условия!
+                        </div>
+                        <br/>
+                        <div className='text-center'>
+                            <a href='/' style={this.additionalLinkStyle}>
+                                ПОЛУЧИТЬ ИНДИВИДУАЛЬНЫЙ ТАРИФ
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className='row d-flex flex-row justify-content-evenly mx-3' style={this.ratesStyle}>
-                {rates}
-            </div>
-            <div className="container" style={this.additionalContainerStyle}>
-                <div className='text-center' style={this.additionalTextStyle}>
-                    Вам не подходят наши тарифы?
-                    Оставьте заявку и мы предложим вам индивидуальные условия!
-                </div>
-                <br/>
-                <div className='text-center'>
-                    <a href='/' style={this.additionalLinkStyle}>
-                        ПОЛУЧИТЬ ИНДИВИДУАЛЬНЫЙ ТАРИФ
-                    </a>
-                </div>
-            </div>
-        </div>
         )
     }
 

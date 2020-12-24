@@ -15,7 +15,7 @@ export default class Footer extends React.Component {
                 <div className={styles.footerGlobal}>
                 <Form/>
                     <div className={styles.bgImg}>
-                        <div className="container">
+                        <div className="container px-md-0">
                             <div className={styles.links}>
                                 <a href="https://facebook.com" className={styles.socialNetwork}>
                                     <img

@@ -12,3 +12,8 @@
         justify-self: start;
     }
 }
+
+.backgroundImg{
+    background: url("./../../res/images/D-background-opacity.svg") no-repeat top right;
+    background-size: 60%;
+}

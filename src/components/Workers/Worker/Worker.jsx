@@ -4,8 +4,7 @@ import styles from "./Worker.module.css";
 export default class Worker extends React.Component {
 
 imageStyle = {
-    maxWidth: '100%',
-    minWidth: 50
+    width: '100%'
 }
 
 cardStyle = {
@@ -26,7 +25,11 @@ titleStyle = {
         return (
             <div style={this.cardStyle}>
                 <div className='col m-0 p-0'>
-                    <div className='row justify-content-center m-0 p-0'>
+                    <div className='row justify-content-center m-0 p-0' style={{
+                        height: 'auto',
+                        display: 'flex',
+                        alignItems: 'stretch'
+                    }}>
                         <img
                             className='mb-3'
                             style={this.imageStyle}
