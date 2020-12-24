@@ -18,9 +18,11 @@ export default class OurFormModal extends React.Component {
         };
     }
 
-    onSubmit = () => {
+    onSubmit = (event) => {
+        event.preventDefault();
         const recaptchaValue = recaptchaRef.current.getValue();
-        this.props.onSubmit(recaptchaValue);
+        //this.props.onSubmit(recaptchaValue);
+        console.log(recaptchaValue);
     }
 
     render() {

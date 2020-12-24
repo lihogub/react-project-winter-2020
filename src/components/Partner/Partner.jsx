@@ -28,7 +28,7 @@ export default class Partner extends React.Component {
         partnersUp.splice(0, 4);
         return (
             <div className="container-fluid px-0 mx-0 pt-3 pb-5 mx-0 mb-md-3">
-                <div className="container-fluid container-md pb-3 px-0 pb-md-5 mx-3">
+                <div className="container-fluid container-md pb-3 px-0 pb-md-5 px-3">
                     <h1 className={`text-center ${styles.titleStyle}`}>С нами работают</h1>
                     <p className={`text-left text-md-center ${styles.textStyle}`}>
                         Десятки компаний доверяют нам самое ценное, что у них есть в интернете - свои сайты.
