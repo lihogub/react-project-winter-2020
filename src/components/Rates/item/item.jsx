@@ -8,10 +8,10 @@ export default class Rate extends React.Component {
 
         return (
 
-            <div className={`container-fluid container-sm px-0 py-3 col-12 col-md-6 col-lg-4 d-flex d-md-block justify-content-center ${styles.top}`} style={{
-                display: "inline-block",
-                margin: "0"
-            }}>
+            <div
+                className={`container-fluid container-sm px-0 py-3 col-12 col-md-6 col-lg-4 d-flex d-md-block justify-content-center ${styles.top}`}
+                 style={{display: "inline-block", margin: "0"}}
+                 onMouseEnter={this.props.onMouseEnterCallback}>
                 <div className={`${this.props.isBig ? styles.rateIsBig : styles.rate} py-4 py-lg-5 mx-0 mx-md-3 px-4 py-0 py-md-3`}>
 
                     <div className={styles.header}>
@@ -22,9 +22,9 @@ export default class Rate extends React.Component {
                     </div>
                     <div className={styles.body}>
                         {this.props.desc.map(
-                            item =>
+                            (item, index) =>
                                 (
-                                    <div className={`${styles.body_item} pr-3`}>
+                                    <div key={index} className={`${styles.body_item} pr-3`}>
                                         <img src={checkSvg} className="bi bi-check" alt="check mark"/>
                                         {item}
                                     </div>

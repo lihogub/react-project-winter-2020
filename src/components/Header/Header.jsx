@@ -2,6 +2,7 @@ import React from "react";
 import Menu from "./Menu/Menu";
 import Achievements from "./Achievements/Achievements";
 import styles from "./Header.module.css";
+import {Link} from "react-scroll"
 
 export default class Header extends React.Component {
 
@@ -53,11 +54,13 @@ export default class Header extends React.Component {
                                     </h5>
                                 </div>
                                 <div className="col-12 d-flex justify-content-center justify-content-md-start">
-                                    <div
+                                    <Link
+                                        to="rates"
+                                        smooth={true}
                                         className={`col-8 col-md-5 mt-4 mx-0 py-3 btn btn-outline-primary ${styles.button}`}
                                         style={this.buttonStyle}>
                                         ТАРИФЫ
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

@@ -5,7 +5,7 @@ export default class Worker extends React.Component {
 
 imageStyle = {
     maxWidth: '100%',
-    height: 'auto'
+    minWidth: 50
 }
 
 cardStyle = {

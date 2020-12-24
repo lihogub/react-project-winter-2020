@@ -34,7 +34,6 @@ export default class Testimonial extends React.Component {
 
     settings = {
         dots: false,
-
         infinite: true,
         fade: true,
         speed: 1000,
@@ -62,7 +61,7 @@ export default class Testimonial extends React.Component {
                 <h1 className={`${styles.testimonialTitle} text-center mb-4 mb-md-5 pt-0 pt-md-5`}>
                     Отзывы
                 </h1>
-                <div className={`mx-0 mx-md-5 ${styles.testimonial}`}>
+                <div className={`mx-3 mx-md-5 ${styles.testimonial}`}>
                     <div className={`row container-fluid ${styles.testimonialItem} mx-0`}>
                         <div className="col-12 col-xl-8 px-0 p-sm-3 p-md-4 p-lg-5">
                             <Slider {...this.settings} ref={c => this.slider = c}>

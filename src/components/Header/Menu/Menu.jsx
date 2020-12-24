@@ -26,7 +26,7 @@ export default class Menu extends React.Component {
         state.linkDataJson.map(
             (item, index, _) => {
                 if (item.drop.length) {
-                    return <MenuItemDropdown id={item.id} key={item.id} text={item.text} href={item.ref}
+                    return <MenuItemDropdown id={item.id} key={item.id} text={item.text}
                                              drop={item.drop} isActive={item.id === activeLinkId}/>
                 } else {
                     return <MenuItem id={item.id} key={item.id} text={item.text} href={item.ref}
@@ -47,7 +47,7 @@ export default class Menu extends React.Component {
                             <NavDropdown.Item children={nestedItem.text} className="text-white py-2 px-3"
                                               href={nestedItem.ref} key={index} style={{fontSize: "13px", fontWeight: 500}}/>
                     )
-                    return <NavDropdown id={item.id} style={{textIndent: "20px", fontWeight: 500}} title={item.text} show={true}
+                    return <NavDropdown id={item.id} style={{textIndent: "20px", fontWeight: 500}} title={item.text}
                                         children={nestedItems} key={index}/>
                 }
             }
@@ -56,7 +56,8 @@ export default class Menu extends React.Component {
     render() {
         return (
             <Navbar collapseOnSelect expand="md" variant="dark"
-                    className="py-0 px-0 px-md-2 container-fluid container-md justify-content-md-start">
+                    className="py-0 px-0 px-md-2 container-fluid container-md justify-content-md-start"
+            >
                 <div className="d-none d-md-flex my-4 container justify-content-md-start">
                     <Navbar.Brand href="#main" className="align-items-center justify-content-center">
                         <Image src={drupalCoderImg} width="170px"/>
@@ -75,10 +76,11 @@ export default class Menu extends React.Component {
                             {this.createLinksMobile(this.state)}
                         </Nav>
                     </Navbar.Collapse>
-                    <Navbar.Brand href="#main" className="align-items-center justify-content-center mx-3">
+                    <Navbar.Brand href="#main" className="align-items-center justify-content-center col-auto">
                         <Image src={drupalCoderImg} width="170px"/>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mx-1 px-0"/>
+                    <div className="col d-flex" />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mx-1 px-0 col-auto"/>
                 </div>
             </Navbar>
         )

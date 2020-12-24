@@ -61,7 +61,7 @@ export default class Workers extends React.Component {
                         Команда
                     </h2>
                     <div className={style.wrapper}>
-                        <div className='row row-cols-2 row-cols-md-3 row-cols-sm-2'>
+                        <div className='row row-cols-2 row-cols-md-3 row-cols-sm-2 mx-1'>
                             {workers}
                         </div>
                     </div>

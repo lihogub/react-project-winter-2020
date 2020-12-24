@@ -15,7 +15,7 @@ export default class Case extends React.Component {
                 <h5 className={`text-center pt-5 pt-md-3 pb-2 py-md-5 ${styles.titleStyle}`}>
                     Последние кейсы
                 </h5>
-                <div className="row">
+                <div className="row mx-1">
                     <div className={this.commonClasses + " col-lg-4"}>
                         <CaseItem
                             imgUrl={this.getImgUrl(0)}
@@ -57,7 +57,7 @@ export default class Case extends React.Component {
                             imgUrl={this.getImgUrl(4)}
                             title={"Обмен товарами и заказами интернет-магазинов на Drupal 7 с 1С: Предприятие, Мойсклад, Класс365"}
                             isFilled={false}
-                            desc={<p>Опубликован <Link to="module">релиз модуля...</Link></p>}
+                            children={<p>Опубликован <Link to="module">релиз модуля...</Link></p>}
                             date={"22.08.2019"}
                             link={"article-5"}
                         />

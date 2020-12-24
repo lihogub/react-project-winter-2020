@@ -8,7 +8,8 @@ const endpoint = "https://react-warriors-rest-api.herokuapp.com/api/rate"
 export default class Rates extends React.Component {
 
     state = {
-        rateData: []
+        rateData: [],
+        activeRate: 1
     }
 
     componentDidMount() {
@@ -56,17 +57,17 @@ export default class Rates extends React.Component {
         const rates = this.state.rateData.map(
             (item, index) => (
                 <Rate
-                    isBig={index === 1}
                     key={item.id}
+                    isBig={item.id === this.state.activeRate}
                     title={item.title}
                     desc={item.features}
-                    isActive={item.id === 1}
+                    onMouseEnterCallback={() => this.setState(state=>({activeRate: item.id}))}
                 />
             )
         )
 
         return (
-        <div className='container' style={this.componentStyle}>
+        <div id="rates" className='container' style={this.componentStyle} onMouseLeave={() => this.setState({activeRate: 1})}>
             <div className='row'>
                 <div className='col-md-12'>
                     <h2 className={`pt-md-5 pb-md-5 ${styles.title}`}>
@@ -74,7 +75,7 @@ export default class Rates extends React.Component {
                     </h2>
                 </div>
             </div>
-            <div className='row d-flex flex-row justify-content-evenly' style={this.ratesStyle}>
+            <div className='row d-flex flex-row justify-content-evenly mx-3' style={this.ratesStyle}>
                 {rates}
             </div>
             <div className="container" style={this.additionalContainerStyle}>

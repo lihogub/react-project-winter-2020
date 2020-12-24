@@ -37,20 +37,22 @@ export default class CaseItem extends React.Component {
 
     render() {
         return (
-            <Link to={this.props.link} className={`d-flex align-items-end container-fluid justify-content-center mt-0 mb-3 px-0 ${styles.caseStyle}`}
+            <div className={`d-flex align-items-end container-fluid justify-content-center mt-0 mb-3 px-0 ${styles.caseStyle}`}
                      style={this.props.isFilled ? {...this.defaultCaseStyle, ...this.filledCaseStyle} : this.defaultCaseStyle}>
                     <div className="d-flex row px-0 col-12">
                         {!this.props.isFilled && <div className={`mb-4 ${styles.imgSize}`} style={this.imgStyle}/>}
                         <div className="px-3 px-md-4 pt-md-4">
-                            <h5 style={this.titleColor} className={styles.titleStyle}>
-                                {this.props.title}
-                            </h5>
+                            <Link to={this.props.link}>
+                                <h5 style={this.titleColor} className={styles.titleStyle}>
+                                    {this.props.title}
+                                </h5>
+                            </Link>
                             {this.props.date ? <p style={this.dateStyle}>{this.props.date}</p> : <br/>}
                             {!this.props.isFilled &&
-                            this.props.desc ? <p className={`${styles.descStyle} pb-5`}>{this.props.desc}</p> : null}
+                            this.props.desc ? <p className={`${styles.descStyle} pb-5`}>{this.props.desc}</p> : this.props.children}
                         </div>
                     </div>
-            </Link>
+            </div>
         )
     }
 

@@ -7,6 +7,10 @@
     transform: scale(1.02);
 }
 
+.caseStyle p {
+    color: black;
+    font-size: 14px;
+}
 
 .titleStyle {
     font-size: 14px;

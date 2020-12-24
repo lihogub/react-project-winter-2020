@@ -39,7 +39,7 @@ export default class Advantage extends React.Component {
         )
         return (
             <div className='container'>
-                <div className='row'>
+                <div className='row mx-3'>
                     <div className='col-md-12'>
                         <h2 className={styles.title}>
                             Поддержка от Drupal-coder

@@ -9,10 +9,10 @@ export default class ExpertiseItem extends React.Component {
         fontWeight: 500
     }
 
-        render() {
+    render() {
         return (
             <div style={this.itemStyle} className="pl-3 py-1 mx-0 my-2">
-                <p>{this.props.text}</p>
+                {this.props.text ? <p>{this.props.text}</p> : this.props.children}
             </div>
         )
     }

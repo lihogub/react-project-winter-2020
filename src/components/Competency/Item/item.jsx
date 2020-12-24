@@ -10,10 +10,6 @@ export default class CompetencyItem extends React.Component {
         textAlign: "center"
     }
 
-    textStyle = {
-        fontSize: "16px"
-    }
-
     render() {
         return (
             <div className={styles.common}>
@@ -24,10 +20,10 @@ export default class CompetencyItem extends React.Component {
                     </div>
                 </div>
                 <div className={`${styles.description} my-3`} style={{maxWidth: "180px"}}>
-                    {this.props.title && <h2 style={this.titleStyle} className="text-md-left">
+                    {this.props.title && <h2 className={`text-md-left ${styles.description}`}>
                         {this.props.title}
                     </h2>}
-                    <p style={this.textStyle}>
+                    <p className={`${styles.description}`}>
                         {this.props.text}
                     </p>
                 </div>

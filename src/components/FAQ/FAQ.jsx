@@ -9,7 +9,7 @@ export default class FAQ extends React.Component {
         return (
             <div className={`container-fluid container-lg px-0 pb-5 ${styles.outsideContainer}`}>
                 <h2 className={`text-center pb-2 py-md-5 my-md-4 ${styles.mainTitle}`}>FAQ</h2>
-                <Accordion defaultActiveKey={1}>
+                <Accordion defaultActiveKey={1} className="mx-3">
                     <AccordionCard keyy={1}
                                    question={"Кто непосредственно занимается поддержкой?"}
                                    answer={"Lorem ipsum dolor sit amet, consectetur adipiscing elit." +

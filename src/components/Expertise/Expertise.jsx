@@ -2,6 +2,7 @@ import React from "react";
 import ExpertiseItem from "./Item/ExpertiseItem";
 import laptopImg from "../../res/images/laptop.png"
 import styles from "./Expertise.module.css"
+import {Link} from "react-router-dom";
 
 export default class Expertise extends React.Component {
 
@@ -46,8 +47,8 @@ export default class Expertise extends React.Component {
                                 </div>
                                 <div className={this.commonItemStyle}>
                                     <ExpertiseItem
-                                        text={<p>Участвуем в разработке ядра Drupal и модулей на Drupal.org,
-                                        разрабатываем <a href="modules" style={{color: "#F14D34"}}>свои модули Drupal</a></p>}
+                                        children={<p>Участвуем в разработке ядра Drupal и модулей на Drupal.org,
+                                            разрабатываем <Link to="modules" style={{color: "#F14D34"}}>свои модули Drupal</Link></p>}
                                     />
                                 </div>
                                 <div className={this.commonItemStyle}>

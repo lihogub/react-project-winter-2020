@@ -15,7 +15,6 @@
     transition: all 500ms;
     transform-origin: center;
     box-shadow: 0 0 30px 30px rgba(5,12,51,.05);
-    transform: scale(1.1);
 }
 
 .rateIsBig .footer_button {
@@ -83,6 +82,11 @@
 }
 
 @media (min-width: 768px) {
+
+    .rateIsBig {
+        transform: scale(1.1);
+    }
+
     .rate:hover{
         box-shadow: 0 0 30px 30px rgba(5,12,51,.05);
         transform: scale(1.1);
