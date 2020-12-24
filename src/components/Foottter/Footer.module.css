@@ -2,6 +2,8 @@
     overflow: hidden;
     background: rgb(4, 6, 19);
     background: linear-gradient(90deg, rgba(4, 6, 19, 1) 0%, rgba(26, 27, 39, 1) 100%);
+
+    padding-bottom: 5vw;
 }
 
 /* xs */
@@ -31,10 +33,6 @@
 
         background-size: auto 22vw;
     }
-
-    .footerGlobal {
-        padding-bottom: 5vw;
-    }
 }
 
 /* sm 570+ */
@@ -43,10 +41,6 @@
         background-position: 103% 200%;
 
         background-size: auto 22vw;
-    }
-
-    .footerGlobal {
-        padding-bottom: 5vw;
     }
 }
 
@@ -114,7 +108,7 @@
     .bgImg {
         background-position: 103% -40%;
 
-        background-size: auto 17vw;
+        background-size: auto 20vw;
         padding-bottom: 2vw;
     }
 
@@ -133,8 +127,11 @@
 }
 
 .socialNetwork {
-    margin-right: 3vw;
+    margin-right: 10px;
     margin-bottom: 1vw;
+    padding: 5px;
+    background-color: #F14D34;
+    border-radius: 7px;
 }
 
 .links {
