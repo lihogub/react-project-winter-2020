@@ -24,9 +24,13 @@ export default class Rate extends React.Component {
                         {this.props.desc.map(
                             (item, index) =>
                                 (
-                                    <div key={index} className={`${styles.body_item} pr-3`}>
-                                        <img src={checkSvg} className="bi bi-check" alt="check mark"/>
-                                        {item}
+                                    <div key={index} className={`${styles.body_item} row px-3`}>
+                                        <div className="col-auto px-0">
+                                            <img src={checkSvg} className="bi bi-check p-0 m-0" alt="check mark"/>
+                                        </div>
+                                        <div className="col pr-0">
+                                            {item}
+                                        </div>
                                     </div>
                                 )
                         )}
