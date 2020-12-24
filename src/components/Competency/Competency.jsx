@@ -37,8 +37,8 @@ export default class Competency extends React.Component {
 
         return (
                 <div className='container' style={{padding: "118px 0"}}>
-                    <div className='row mx-3'>
-                        <div className='col-md-6 px-0'>
+                    <div className='row px-3'>
+                        <div className='col-md-6'>
                             <h2 className={styles.title}>
                                 13 лет совершенствуем
                                 компетенции в Друпал
@@ -50,7 +50,7 @@ export default class Competency extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className='row row-cols-2 row-cols-md-4 row-cols-sm-2 mx-3'>
+                    <div className='row row-cols-2 row-cols-md-4 row-cols-sm-2 px-3'>
                         {competencies}
                     </div>
                 </div>
