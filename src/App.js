@@ -13,6 +13,7 @@ import Testimonial from "./components/Testimonial/Testimonial";
 import Partner from "./components/Partner/Partner"
 import Case from "./components/Case/Case";
 import Expertise from "./components/Expertise/Expertise";
+import OurFormModal from "./components/OurFormModal/OurFormModal";
 
 
 export default class App extends React.Component {
@@ -27,6 +28,7 @@ export default class App extends React.Component {
             <Container fluid={true} className="px-0 overflow-hidden">
                 <Header/>
                 <div style={this.style} className="px-0">
+                    <OurFormModal/>
                     <Competency/>
                     <Advantage/>
                     <Expertise/>
