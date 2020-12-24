@@ -108,7 +108,7 @@
     .bgImg {
         background-position: 103% -40%;
 
-        background-size: auto 17vw;
+        background-size: auto 20vw;
         padding-bottom: 2vw;
     }
 
@@ -129,6 +129,9 @@
 .socialNetwork {
     margin-right: 10px;
     margin-bottom: 1vw;
+    padding: 5px;
+    background-color: #F14D34;
+    border-radius: 7px;
 }
 
 .links {
