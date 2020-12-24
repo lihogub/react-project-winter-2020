@@ -142,7 +142,7 @@
 }
 
 .formField{
-    color: white;
+    color: black;
     font-weight: 500;
     line-height: 1.2;
     font-size: 14px;
@@ -152,7 +152,7 @@
 }
 
 .formField:focus {
-    color: white;
+    color: black;
     background: transparent;
 }
 
