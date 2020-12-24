@@ -1,0 +1,188 @@
+.button{
+    height: 54px;
+    border: #F14D34 2px solid;
+    background-color: #F14D34;
+    color: white;
+    font-size: 13px;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: red;
+    border: #F14D34 2px solid;
+}
+
+.button:active {
+    background-color: transparent !important;
+    border: #F14D34 2px solid !important;
+}
+
+
+
+.title{
+    font-weight: bold;
+    line-height: 1.115;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 767px) {
+    .title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767px){
+    .form{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+.checkBoxCheck::before{
+    background: url("./../../res/images/appDark.svg") no-repeat;
+    background-size: 115%;
+    background-position-x: center;
+    background-position-y: center;
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    margin-top: -24.5px;
+    margin-left: -14.5px;
+    transform: scale(1.75);
+    opacity: 0.6;
+
+    border-radius: 5px;
+}
+
+@keyframes rotating {
+    0% {
+        transform: scale(1.75);
+    }
+
+    50%{
+        transform: scale(4) rotateZ(45deg);
+    }
+
+    100% {
+        transform: scale(1.75) rotateZ(90deg);
+    }
+}
+
+.checkBoxCheck:hover::before{
+    box-shadow: 0px 0px 5px red;
+    transform: scale(1.68);
+}
+
+.checkBoxCheck:active::before{
+    animation: rotating 0.25s;
+}
+
+.checkBoxCheck input{
+    position: absolute;
+    left: 27px;
+    bottom: 34px;
+    opacity: 0.0;
+    transform: scale(2.2);
+}
+
+.checkBoxCheck input:checked{
+    opacity: 1;
+}
+
+.checkBoxCheck{
+    position: absolute;
+}
+
+.checkBox{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.text{
+    text-align: justify;
+    margin-left: 36px;
+    font-weight: normal;
+    line-height: 1.35;
+    font-size: 9pt;
+}
+
+.dot{
+    text-decoration: none;
+    color: white !important;
+}
+
+.dot::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url("../../res/images/asterisk.svg") no-repeat;
+    position: absolute;
+
+    margin-top: -4px;
+    margin-left: -2px;
+    transform: scale(0.4);
+}
+
+.link{
+    color: #F14D34 !important;
+}
+
+.formFieldWrap{
+    margin: 0;
+    padding: 0 0 7px;
+}
+
+.formField{
+    color: white;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 14px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    padding: 26px 24px;
+}
+
+.formField:focus {
+    color: white;
+    background: transparent;
+}
+
+.formField:hover {
+    background: transparent;
+}
+
+.formField:active {
+    background: transparent;
+}
+
+
+
+
+
+.bgImg {
+    padding-top: 35px;
+    padding-bottom: 60px;
+
+    background-repeat: no-repeat;
+    background-image: url(../../res/images/new-dr-coder-bg.svg);
+
+    background-position-x: center;
+    background-size: 182px;
+}
+
+@media (min-width: 576px) {
+    .bgImg {
+        background-size: 290px;
+    }
+
+}
+

@@ -9,7 +9,7 @@ const captchaKey = () =>{
     return "6LeN2w4aAAAAABXWa4jRkIdelkgFss3Dey_lYxCJ";
 }
 
-export default class Competency extends React.Component {
+export default class OurForm extends React.Component {
 
     onSubmit = () => {
         const recaptchaValue = recaptchaRef.current.getValue();
