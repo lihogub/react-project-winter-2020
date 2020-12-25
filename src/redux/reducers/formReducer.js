@@ -5,8 +5,13 @@ const defaultState = {
     phone: "",
     email: "",
     comment: "",
+    captcha: "",
     agree: false,
-    captcha: ""
+    loading: false,
+    error: false,
+    errorMsg: "",
+    modalShown: false,
+    captchaSiteKey: "6LclJRQaAAAAAKhXKoqcXGAatHECHoN9xuYsytzk"
 }
 
 export function formReducer(state = defaultState, action) {
@@ -26,6 +31,24 @@ export function formReducer(state = defaultState, action) {
         }
         case (formActions.FORM_AGREE_SET): {
             return {...state, ...payload}
+        }
+        case (formActions.FORM_CAPTCHA_SET): {
+            return {...state, ...payload}
+        }
+        case (formActions.FORM_SEND_STARTED): {
+            return {...state, loading: true}
+        }
+        case (formActions.FORM_SEND_SUCCESS): {
+            return {...state, loading: false}
+        }
+        case (formActions.FORM_SEND_FAILURE): {
+            return {...state, loading: false, error: true, ...payload}
+        }
+        case (formActions.FORM_MODAL_SHOW): {
+            return {...state, modalShown: true}
+        }
+        case (formActions.FORM_MODAL_HIDE): {
+            return {...state, modalShown: false}
         }
         default: {
             return state

@@ -8,16 +8,11 @@ import {bindActionCreators} from "redux";
 
 const recaptchaRef = React.createRef();
 
-const captchaKey = () => {
-    return "6LeN2w4aAAAAABXWa4jRkIdelkgFss3Dey_lYxCJ";
-}
-
 class OurForm extends React.Component {
 
     onSubmit = (event) => {
-        event.preventDefault();
-        const recaptchaValue = recaptchaRef.current.getValue();
-        this.props.onSubmit(recaptchaValue);
+        event.preventDefault()
+        this.props.sendForm()
     }
 
     render() {
@@ -64,7 +59,7 @@ class OurForm extends React.Component {
 
                                     <Form className={`${styles.form}`} onSubmit={this.onSubmit}>
 
-                                        <Form.Group controlId="exampleForm.nameInput" className={styles.formFieldWrap}>
+                                        <Form.Group controlId="staticForm.nameInput" className={styles.formFieldWrap}>
                                             <Form.Control type="text" placeholder="Ваше имя"
                                                           className={styles.formField}
                                                           value={this.props.form.name}
@@ -72,7 +67,7 @@ class OurForm extends React.Component {
                                             />
                                         </Form.Group>
 
-                                        <Form.Group controlId="exampleForm.phoneInput" className={styles.formFieldWrap}>
+                                        <Form.Group controlId="staticForm.phoneInput" className={styles.formFieldWrap}>
                                             <Form.Control type="phone" placeholder="Телефон"
                                                           className={styles.formField}
                                                           value={this.props.form.phone}
@@ -80,7 +75,7 @@ class OurForm extends React.Component {
                                             />
                                         </Form.Group>
 
-                                        <Form.Group controlId="exampleForm.emailInput" className={styles.formFieldWrap}>
+                                        <Form.Group controlId="staticForm.emailInput" className={styles.formFieldWrap}>
                                             <Form.Control type="email" placeholder="E-mail"
                                                           className={styles.formField}
                                                           value={this.props.form.email}
@@ -88,7 +83,7 @@ class OurForm extends React.Component {
                                             />
                                         </Form.Group>
 
-                                        <Form.Group controlId="exampleForm.commentInput"
+                                        <Form.Group controlId="staticForm.commentInput"
                                                     className={styles.formFieldWrap}>
                                             <Form.Control as="textarea" rows={5} placeholder="Комментарий"
                                                           className={styles.formField}
@@ -111,7 +106,6 @@ class OurForm extends React.Component {
                                                 required
                                                 className={styles.checkBox}
                                                 type='checkbox'
-                                                id="agree"
                                                 checked={this.props.form.agree}
                                                 onChange={(e) => this.props.setFormAgree(e.target.checked)}
                                             />
@@ -121,8 +115,8 @@ class OurForm extends React.Component {
                                         <div className='mb-2'>
                                             <ReCAPTCHA
                                                 ref={recaptchaRef}
-                                                sitekey={captchaKey()}
-                                                onChange={(e)=>console.log(e)}
+                                                sitekey={this.props.form.captchaSiteKey}
+                                                onChange={e => this.props.setFormCaptcha(recaptchaRef.current.getValue())}
                                                 theme='dark'
                                             />
                                         </div>
@@ -130,6 +124,7 @@ class OurForm extends React.Component {
                                         <button
                                             type="submit"
                                             className={`btn btn-outline-secondary btn-lg btn-block ${styles.button}`}
+                                            disabled={this.props.form.loading}
                                         >
                                             СВЯЖИТЕСЬ С НАМИ
                                         </button>

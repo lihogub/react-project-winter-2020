@@ -1,10 +1,19 @@
+import axios from "axios";
+
+const submitFormAddress = "https://react-warriors-rest-api.herokuapp.com/submit"
+
 export const formActions = {
     FORM_NAME_SET: "FORM_NAME_SET",
     FORM_PHONE_SET: "FORM_PHONE_SET",
     FORM_EMAIL_SET: "FORM_EMAIL_SET",
     FORM_COMMENT_SET: "FORM_COMMENT_SET",
     FORM_AGREE_SET: "FORM_AGREE_SET",
-    FORM_CAPTCHA_SET: "FORM_CAPTCHA_SET"
+    FORM_CAPTCHA_SET: "FORM_CAPTCHA_SET",
+    FORM_SEND_STARTED: "FORM_SEND_STARTED",
+    FORM_SEND_SUCCESS: "FORM_SEND_SUCCESS",
+    FORM_SEND_FAILURE: "FORM_SEND_FAILURE",
+    FORM_MODAL_HIDE: "FORM_MODAL_HIDE",
+    FORM_MODAL_SHOW: "FORM_MODAL_SHOW"
 }
 
 export const formActionCreators = {
@@ -25,5 +34,44 @@ export const formActionCreators = {
     },
     setFormCaptcha(captcha) {
         return {type: formActions.FORM_CAPTCHA_SET, payload: {captcha}}
+    },
+    formModalShow() {
+        return {type: formActions.FORM_MODAL_SHOW}
+    },
+    formModalHide() {
+        return {type: formActions.FORM_MODAL_HIDE}
+    },
+    formSendStarted() {
+        return {type: formActions.FORM_SEND_STARTED}
+    },
+    formSendSuccess() {
+        return {type: formActions.FORM_SEND_SUCCESS}
+    },
+    formSendFailure(errorMsg) {
+        return {type: formActions.FORM_SEND_FAILURE, payload: {errorMsg}}
+    },
+    sendForm() {
+        return function (dispatch, getState) {
+            dispatch(formActionCreators.formSendStarted())
+            const payload = {
+                name: getState().form.name,
+                email: getState().form.email,
+                phone: getState().form.phone,
+                comment: getState().form.comment,
+                captcha: getState().form.captcha
+            }
+            axios.post(submitFormAddress, payload)
+                .then(res => {
+                    console.log(res)
+                    if (res.data.success) {
+                        dispatch(formActionCreators.formSendSuccess())
+                    } else {
+                        dispatch(formActionCreators.formSendFailure(res.data.error || "Unknown error"))
+                    }
+                })
+                .catch(error => {
+                    dispatch(formActionCreators.formSendFailure("Network error"))
+                })
+        }
     }
 }

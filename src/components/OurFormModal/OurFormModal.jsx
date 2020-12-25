@@ -8,24 +8,11 @@ import {formActionCreators} from "../../redux/actions/actions";
 
 const recaptchaRef = React.createRef();
 
-const captchaKey = () =>{
-    return "6LeN2w4aAAAAABXWa4jRkIdelkgFss3Dey_lYxCJ";
-}
-
 class OurFormModal extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            show: false
-        };
-    }
-
     onSubmit = (event) => {
-        event.preventDefault();
-        const recaptchaValue = recaptchaRef.current.getValue();
-        //this.props.onSubmit(recaptchaValue);
-        console.log(recaptchaValue);
+        event.preventDefault()
+        this.props.sendForm()
     }
 
     render() {
@@ -36,17 +23,17 @@ class OurFormModal extends React.Component {
                     <button
                         type="submit"
                         className={`btn btn-outline-secondary btn-lg btn-block mx-3 justify-self-center ${styles.button}`}
-                        onClick={() => this.setState({show: true})}
+                        onClick={() => this.props.formModalShow()}
                     >
                         СВЯЖИТЕСЬ С НАМИ
                     </button>
                 </div>
 
                 <Modal
-                    onHide={() => this.setState({show: false})}
+                    onHide={() => this.props.formModalHide()}
                     backdrop={true}
                     keyboard={false}
-                    show={this.state.show}
+                    show={this.props.form.modalShown}
                     size="md"
                     aria-labelledby="contained-modal-title-vcenter"
                     centered
@@ -62,28 +49,30 @@ class OurFormModal extends React.Component {
 
                         <Form onSubmit={this.onSubmit}>
 
-                            <Form.Group controlId="exampleForm.nameInput" className={styles.formFieldWrap}>
-                                <Form.Control type="text" placeholder="Ваше имя" className={styles.formField}
+                            <Form.Group controlId="modalForm.nameInput" className={styles.formFieldWrap}>
+                                <Form.Control type="text"
+                                              placeholder="Ваше имя"
+                                              className={styles.formField}
                                               value={this.props.form.name}
                                               onChange={(e) => this.props.setFormName(e.target.value)}
                                 />
                             </Form.Group>
 
-                            <Form.Group controlId="exampleForm.phoneInput" className={styles.formFieldWrap}>
+                            <Form.Group controlId="modalForm.phoneInput" className={styles.formFieldWrap}>
                                 <Form.Control type="phone" placeholder="Телефон" className={styles.formField}
                                               value={this.props.form.phone}
                                               onChange={(e) => this.props.setFormPhone(e.target.value)}
                                 />
                             </Form.Group>
 
-                            <Form.Group controlId="exampleForm.emailInput" className={styles.formFieldWrap}>
+                            <Form.Group controlId="modalForm.emailInput" className={styles.formFieldWrap}>
                                 <Form.Control type="email" placeholder="E-mail" className={styles.formField}
                                               value={this.props.form.email}
                                               onChange={(e) => this.props.setFormEmail(e.target.value)}
                                 />
                             </Form.Group>
 
-                            <Form.Group controlId="exampleForm.commentInput" className={styles.formFieldWrap}>
+                            <Form.Group controlId="modalForm.commentInput" className={styles.formFieldWrap}>
                                 <Form.Control as="textarea" rows={3} placeholder="Комментарий" className={styles.formField}
                                               value={this.props.form.comment}
                                               onChange={(e) => this.props.setFormComment(e.target.value)}
@@ -103,7 +92,6 @@ class OurFormModal extends React.Component {
                                     required
                                     className={styles.checkBox}
                                     type='checkbox'
-                                    id="agree"
                                     checked={this.props.form.agree}
                                     onChange={(e) => this.props.setFormAgree(e.target.checked)}
                                 />
@@ -114,14 +102,15 @@ class OurFormModal extends React.Component {
                                 <div className='m-0 mb-2 p-0 overflow-hidden'>
                                     <ReCAPTCHA
                                         ref={recaptchaRef}
-                                        sitekey={captchaKey()}
-                                        onChange={this.onChange}
+                                        sitekey={this.props.form.captchaSiteKey}
+                                        onChange={e => this.props.setFormCaptcha(recaptchaRef.current.getValue())}
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
                                     className={`btn btn-outline-secondary btn-lg btn-block ${styles.button}`}
+                                    disabled={this.props.form.loading}
                                 >
                                     СВЯЖИТЕСЬ С НАМИ
                                 </button>
