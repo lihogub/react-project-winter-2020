@@ -44,66 +44,75 @@
     }
 }
 
-
-.checkBoxCheck::before{
-    background: url("./../../res/images/appDark.svg") no-repeat;
-    background-size: 115%;
-    background-position-x: center;
-    background-position-y: center;
-    content: "";
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    margin-top: -24.5px;
-    margin-left: -14.5px;
-    transform: scale(1.75);
-    opacity: 0.6;
-
-    border-radius: 5px;
-}
-
-@keyframes rotating {
+@keyframes onClick {
     0% {
-        transform: scale(1.75);
-    }
-
-    50%{
-        transform: scale(4) rotateZ(45deg);
+        transform: scale(1);
     }
 
     100% {
-        transform: scale(1.75) rotateZ(90deg);
+        transform: scale(1.05);
     }
 }
 
-.checkBoxCheck:hover::before{
-    box-shadow: 0px 0px 5px red;
-    transform: scale(1.68);
+@keyframes tickOnClick {
+    0% {
+        transform: scale(1) rotateY(-60deg);
+    }
+
+    100% {
+        transform: scale(1) rotateY(0deg);
+    }
 }
 
-.checkBoxCheck:active::before{
-    animation: rotating 0.25s;
-}
-
-.checkBoxCheck input{
-    position: absolute;
-    left: 27px;
-    bottom: 34px;
-    opacity: 0.0;
-    transform: scale(2.2);
-}
-
-.checkBoxCheck input:checked{
-    opacity: 1;
-}
-
-.checkBoxCheck{
-    position: absolute;
+.checkBoxGroup{
+    display: block;
+    position: relative;
+    margin-bottom: 6px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .checkBox{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    position: absolute;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    opacity: 0;
+    top: -30px;
+}
+
+.customCheckbox{
+    position: absolute;
+    background: transparent;
+    border: 2px solid rgba(50, 50, 50, 0.5);
+    border-radius: 5px;
+    width: 28px;
+    height: 28px;
+    top: -30px;
+}
+
+.customCheckbox:hover{
+    box-shadow: 0 0 5px red;
+    transform: scale(0.95);
+}
+
+.customCheckbox:active{
+    animation: onClick 0.15s;
+}
+
+.checkBox:checked + .customCheckbox::after{
+    content: "";
+    margin-top: 1px;
+    margin-left: 0;
+    width: 23px;
+    height: 22px;
+    background: url("./../../res/images/check2black.svg") no-repeat center;
+    background-size: contain;
+    opacity: 0.6;
+    animation: tickOnClick 300ms;
 }
 
 .text{

@@ -90,27 +90,25 @@ class OurFormModal extends React.Component {
                                 />
                             </Form.Group>
 
-                            <Form.Group className={`${styles.checkBox}`}>
+                            <div className={`${styles.text}`}>
+                                Отправляя заявку, я даю согласие на
+                                <a href="/" className={`${styles.link}`}> обработку своих персональных данных</a>
+                                <a href="/" className={`${styles.dot}`}>
+                                .
+                                </a>
+                            </div>
 
-                                <div className={`${styles.text}`}>
-                                    Отправляя заявку, я даю согласие на
-                                    <a href="/" className={`${styles.link}`}> обработку своих персональных данных</a>
-                                    <a href="/" className={`${styles.dot}`}>
-                                        .
-                                    </a>
-                                </div>
-
-                                <Form.Check
-                                    className={styles.checkBoxCheck}
+                            <label className={`${styles.checkBoxGroup}`}>
+                                <input
                                     required
+                                    className={styles.checkBox}
                                     type='checkbox'
-                                    label=""
-                                    feedback="You must agree before submitting."
+                                    id="agree"
                                     checked={this.props.form.agree}
                                     onChange={(e) => this.props.setFormAgree(e.target.checked)}
                                 />
-
-                            </Form.Group>
+                                <span className={styles.customCheckbox}/>
+                            </label>
 
                             <Modal.Footer className='d-flex justify-content-center'>
                                 <div className='m-0 mb-2 p-0 overflow-hidden'>
