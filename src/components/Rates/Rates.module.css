@@ -15,5 +15,11 @@
 
 .backgroundImg{
     background: url("./../../res/images/D-background-opacity.svg") no-repeat top right;
-    background-size: 60%;
+    background-size: 60vw;
+}
+
+@media screen and (orientation: portrait) {
+    .backgroundImg{
+        background-size: 160vw;
+    }
 }

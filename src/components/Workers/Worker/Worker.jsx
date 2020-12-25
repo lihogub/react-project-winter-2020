@@ -4,7 +4,10 @@ import styles from "./Worker.module.css";
 export default class Worker extends React.Component {
 
 imageStyle = {
-    width: '100%'
+    width: '100%',
+    height: '100%',
+    maxHeight: '280px',
+    maxWidth: '280px'
 }
 
 cardStyle = {
