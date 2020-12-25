@@ -97,29 +97,26 @@ class OurForm extends React.Component {
                                             />
                                         </Form.Group>
 
-                                        <Form.Group className={`${styles.checkBox}`}>
+                                        <div className={`${styles.text}`}>
+                                            Отправляя заявку, я даю согласие на
+                                            <a href="/" className={`${styles.link}`}> обработку своих персональных
+                                                данных</a>
+                                            <a href="/" className={`${styles.dot}`}>
+                                                .
+                                            </a>
+                                        </div>
 
-                                            <div className={`${styles.text}`}>
-                                                Отправляя заявку, я даю согласие на
-                                                <a href="/" className={`${styles.link}`}> обработку своих персональных
-                                                    данных</a>
-                                                <a href="/" className={`${styles.dot}`}>
-                                                    .
-                                                </a>
-                                            </div>
-
-                                            <Form.Check
-                                                className={styles.checkBoxCheck}
+                                        <label className={`${styles.checkBoxGroup}`}>
+                                            <input
                                                 required
+                                                className={styles.checkBox}
                                                 type='checkbox'
-                                                label=""
-                                                feedback="You must agree before submitting."
                                                 id="agree"
                                                 checked={this.props.form.agree}
                                                 onChange={(e) => this.props.setFormAgree(e.target.checked)}
                                             />
-
-                                        </Form.Group>
+                                            <span className={styles.customCheckbox}/>
+                                        </label>
 
                                         <div className='mb-2'>
                                             <ReCAPTCHA
