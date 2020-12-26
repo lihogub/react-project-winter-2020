@@ -40,7 +40,7 @@ export default class App extends React.Component {
                     <Partner/>
                     <FAQ/>
                 </div>
-                <Route path="/form" component={OurFormModal}/>
+                <Route path={"/form"} component={OurFormModal}/>
                 <Footer/>
             </Container>
         )
