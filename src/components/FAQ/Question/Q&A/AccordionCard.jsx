@@ -26,6 +26,7 @@ function CustomHeader({children, eventKey, callback}) {
                     borderRight: isCurrentEventKey ? '3px solid #F14C36' : '3px solid transparent',
                     borderTop: isCurrentEventKey ? '3px solid #F14C36' : '3px solid transparent',
                     borderBottom: 'none',
+                    borderRadius: 0,
                     padding: '10px 20px',
                 }
             }

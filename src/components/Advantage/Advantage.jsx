@@ -26,7 +26,7 @@ export default class Advantage extends React.Component {
     render() {
         const advantages = this.state.advData.map(
             (item) => (
-                <div className='col-sm-6 col-lg-3 col-xs-12' key={item.id}>
+                <div className={`col-sm-6 col-lg-3 col-xs-12 ${styles.itemStyle}`} key={item.id}>
                     <AdvantageItem
                         key={item.id}
                         id={item.id + 1}
