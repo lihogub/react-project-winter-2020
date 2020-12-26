@@ -6,6 +6,10 @@
     margin-bottom: 80px;
 }
 
+.itemStyle{
+    padding-bottom: 7px;
+}
+
 .description {
     margin-bottom: 55px;
     font-weight: 500;
