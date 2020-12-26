@@ -53,6 +53,10 @@ export const formActionCreators = {
     sendForm() {
         return function (dispatch, getState) {
             dispatch(formActionCreators.formSendStarted())
+            if (!getState().form.captcha) {
+                dispatch(formActionCreators.formSendFailure("No captcha"))
+                return
+            }
             const payload = {
                 name: getState().form.name,
                 email: getState().form.email,
