@@ -22,7 +22,7 @@ class OurFormModal extends React.Component {
                 onHide={() => this.props.history.push("/")}
                 backdrop={true}
                 keyboard={false}
-                show={true}
+                show={!(this.props.form.success || this.props.form.error || this.props.form.loading)}
                 size="md"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered

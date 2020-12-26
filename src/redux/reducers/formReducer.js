@@ -8,6 +8,7 @@ const defaultState = {
     captcha: "",
     agree: false,
     loading: false,
+    success: false,
     error: false,
     errorMsg: "",
     captchaSiteKey: "6LclJRQaAAAAAKhXKoqcXGAatHECHoN9xuYsytzk"
@@ -38,10 +39,16 @@ export function formReducer(state = defaultState, action) {
             return {...state, loading: true}
         }
         case (formActions.FORM_SEND_SUCCESS): {
-            return {...state, loading: false}
+            return {...state, loading: false, success: true}
         }
         case (formActions.FORM_SEND_FAILURE): {
             return {...state, loading: false, error: true, ...payload}
+        }
+        case (formActions.FORM_SUCCESS_RESET): {
+            return {...state, success: false}
+        }
+        case (formActions.FORM_FAILURE_RESET): {
+            return {...state, error: false, errorMsg: ""}
         }
         default: {
             return state

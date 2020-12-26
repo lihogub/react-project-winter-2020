@@ -11,7 +11,9 @@ export const formActions = {
     FORM_CAPTCHA_SET: "FORM_CAPTCHA_SET",
     FORM_SEND_STARTED: "FORM_SEND_STARTED",
     FORM_SEND_SUCCESS: "FORM_SEND_SUCCESS",
-    FORM_SEND_FAILURE: "FORM_SEND_FAILURE"
+    FORM_SEND_FAILURE: "FORM_SEND_FAILURE",
+    FORM_SUCCESS_RESET: "FORM_SUCCESS_RESET",
+    FORM_FAILURE_RESET: "FORM_FAILURE_RESET"
 }
 
 export const formActionCreators = {
@@ -33,11 +35,11 @@ export const formActionCreators = {
     setFormCaptcha(captcha) {
         return {type: formActions.FORM_CAPTCHA_SET, payload: {captcha}}
     },
-    formModalShow() {
-        return {type: formActions.FORM_MODAL_SHOW}
+    resetFormFailure() {
+        return {type: formActions.FORM_FAILURE_RESET}
     },
-    formModalHide() {
-        return {type: formActions.FORM_MODAL_HIDE}
+    resetFormSuccess() {
+        return {type: formActions.FORM_SUCCESS_RESET}
     },
     formSendStarted() {
         return {type: formActions.FORM_SEND_STARTED}
