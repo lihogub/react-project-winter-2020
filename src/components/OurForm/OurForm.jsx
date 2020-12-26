@@ -116,7 +116,6 @@ class OurForm extends React.Component {
                                             <ReCAPTCHA
                                                 ref={recaptchaRef}
                                                 sitekey={this.props.form.captchaSiteKey}
-                                                onChange={e => this.props.setFormCaptcha(recaptchaRef.current.getValue())}
                                                 theme='dark'
                                             />
                                         </div>
@@ -125,6 +124,7 @@ class OurForm extends React.Component {
                                             type="submit"
                                             className={`btn btn-outline-secondary btn-lg btn-block ${styles.button}`}
                                             disabled={this.props.form.loading}
+                                            onClick={e => this.props.setFormCaptcha(recaptchaRef.current.getValue())}
                                         >
                                             СВЯЖИТЕСЬ С НАМИ
                                         </button>
