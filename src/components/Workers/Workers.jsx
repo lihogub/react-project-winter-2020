@@ -26,10 +26,10 @@ export default class Workers extends React.Component {
     titleStyle = {
         textAlign: "center",
         fontWeight: "bold",
-        fontSize: "42px",
+        fontSize: "24px",
         color: "#050c33",
-        marginBottom: "80px",
-        marginTop: "130px"
+        marginBottom: "30px",
+        marginTop: "70px"
     }
 
     buttonStyle = {
