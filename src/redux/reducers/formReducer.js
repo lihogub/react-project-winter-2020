@@ -10,7 +10,6 @@ const defaultState = {
     loading: false,
     error: false,
     errorMsg: "",
-    modalShown: false,
     captchaSiteKey: "6LclJRQaAAAAAKhXKoqcXGAatHECHoN9xuYsytzk"
 }
 
@@ -43,12 +42,6 @@ export function formReducer(state = defaultState, action) {
         }
         case (formActions.FORM_SEND_FAILURE): {
             return {...state, loading: false, error: true, ...payload}
-        }
-        case (formActions.FORM_MODAL_SHOW): {
-            return {...state, modalShown: true}
-        }
-        case (formActions.FORM_MODAL_HIDE): {
-            return {...state, modalShown: false}
         }
         default: {
             return state

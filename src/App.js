@@ -1,4 +1,5 @@
 import React from "react";
+import {Route} from "react-router-dom"
 import './App.css';
 import Header from "./components/Header/Header";
 import {Container} from "react-bootstrap";
@@ -28,7 +29,6 @@ export default class App extends React.Component {
             <Container fluid={true} className="px-0 overflow-hidden">
                 <Header/>
                 <div style={this.style} className="px-0">
-                    <OurFormModal/>
                     <Competency/>
                     <Advantage/>
                     <Expertise/>
@@ -40,6 +40,7 @@ export default class App extends React.Component {
                     <Partner/>
                     <FAQ/>
                 </div>
+                <Route path="/form" component={OurFormModal}/>
                 <Footer/>
             </Container>
         )

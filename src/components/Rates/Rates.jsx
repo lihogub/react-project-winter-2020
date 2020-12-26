@@ -2,6 +2,7 @@ import React from "react";
 import Rate from "./item/item";
 import styles from "./Rates.module.css";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 const endpoint = "https://react-warriors-rest-api.herokuapp.com/api/rate"
 
@@ -86,9 +87,9 @@ export default class Rates extends React.Component {
                         </div>
                         <br/>
                         <div className='text-center'>
-                            <a href='/' style={this.additionalLinkStyle}>
+                            <Link to="/form" style={this.additionalLinkStyle}>
                                 ПОЛУЧИТЬ ИНДИВИДУАЛЬНЫЙ ТАРИФ
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
