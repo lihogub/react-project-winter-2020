@@ -69,7 +69,7 @@ export default class Rates extends React.Component {
 
         return (
             <div className={styles.backgroundImg}>
-                <div id="rates" className={`container`} style={this.componentStyle} onMouseLeave={() => this.setState({activeRate: 1})}>
+                <div id="rates" className={`container px-0`} style={this.componentStyle} onMouseLeave={() => this.setState({activeRate: 1})}>
                     <div className='row'>
                         <div className='col-md-12'>
                             <h2 className={`pt-md-5 pb-md-5 ${styles.title}`}>

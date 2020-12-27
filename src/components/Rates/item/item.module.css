@@ -60,6 +60,8 @@
     font-size: 13px;
     box-shadow: none !important;
     transition: .5s;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .footer_button:active {
