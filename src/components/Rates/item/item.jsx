@@ -38,7 +38,7 @@ export default class Rate extends React.Component {
                     </div>
                     <br/>
                     <div className='row justify-content-center px-2'>
-                        <Link to="form" className="w-100 px-2">
+                        <Link to="form" className="w-100 px-2" style={{textDecoration: "none"}}>
                             <button type="button"
                                 className={`btn btn-outline-secondary btn-lg btn-block py-3 ${styles.footer_button}`}
                                 data-toggle="button"
