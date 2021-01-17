@@ -23,15 +23,6 @@ export default class Workers extends React.Component {
             )
     }
 
-    titleStyle = {
-        textAlign: "center",
-        fontWeight: "bold",
-        fontSize: "24px",
-        color: "#050c33",
-        marginBottom: "30px",
-        marginTop: "70px"
-    }
-
     buttonStyle = {
         fontStyle: "normal",
         fontWeight: "500",
@@ -57,7 +48,7 @@ export default class Workers extends React.Component {
         return (
             <div>
                 <div className='container'>
-                    <h2 style={this.titleStyle}>
+                    <h2 className={`${style.title} pb-2 pb-sm-5`}>
                         Команда
                     </h2>
                     <div className={style.wrapper}>

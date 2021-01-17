@@ -23,3 +23,18 @@
     background-color: red !important;
     color: white !important;
 }
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #050c33;
+    margin-bottom: 30px;
+    margin-top: 70px;
+}
+
+@media (min-width: 767px){
+    .title{
+        font-size: 42px;
+    }
+}

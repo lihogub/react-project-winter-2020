@@ -18,7 +18,7 @@ export default class Execution extends React.Component {
                         </h2>
                     </div>
                 </div>
-                <div className='row justify-content-center justify-content-sm-between justify-content-xl-start'>
+                <div className='row justify-content-center justify-content-sm-start'>
                     <div className="col-12 col-sm-6 col-md-4 row justify-content-center justify-content-md-start">
                         <CompetencyItem title="от 1ч" text='Настройка события GA в интернет-магазине'
                                         imageUrl={competencyImg1}/>
